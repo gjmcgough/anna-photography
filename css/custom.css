@@ -1,6 +1,6 @@
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
-  margin-bottom: 0;
+  margin-bottom: -20px;
   border-radius: 0;
 }
 
@@ -42,4 +42,19 @@ footer {
 
 #navbar-title {
   font-size: 200%;
+}
+
+.teleport-images {
+  height: 400px;
+  width: 400px;
+  margin: 7px;
+  float: left;
+  position: relative;
+}
+
+.photo-title {
+  position: absolute;
+   top: 200px;
+   left: 0;
+   width: 100%;
 }

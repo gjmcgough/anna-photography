@@ -3,12 +3,17 @@ var app = angular.module('annaPhotography', []);
 app.controller('MainCtrl', [
 '$scope',
 function($scope){
-  $scope.image = 'img/Corgi.png';
+  $scope.image = '';
 }]);
-$scope.posts = [
-  'post 1',
-  'post 2',
-  'post 3',
-  'post 4',
-  'post 5'
-];
+
+app.controller('ImageCtrl', [
+  '$scope',
+  function($scope){
+    $scope.myImages = ["Corgi.png", "secret-hideaway.png", "llama.jpg", "mex.jpg", "surfing-1400X600.jpg"];
+    $scope.titles = ["Corgi", "Hideaway", "Llama", "Mexico", "Pittedddd"]
+
+    $scope.getImagePath = function(imageName) {
+      return  "../anna-photography/img/" + imageName;
+    };
+
+}]);
