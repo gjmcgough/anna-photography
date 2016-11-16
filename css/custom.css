@@ -17,4 +17,16 @@ footer {
   background-size: cover;
   /* vh stands for viewport height!*/
   height: 100vh;
+  padding: 0;
+}
+
+#feature-image {
+  height: 100vh;
+  width: 100vw;
+  margin-left: -175px;
+  margin-right: -175px;
+}
+
+.social-icon {
+  display: inline-block;
 }
