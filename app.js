@@ -9,7 +9,7 @@ function($scope){
 app.controller('ImageCtrl', [
   '$scope',
   function($scope){
-    $scope.myImages = ["Corgi.png", "secret-hideaway.png", "llama.jpg", "mex.jpg", "surfing-1400X600.jpg"];
+    $scope.myImages = ["Corgi.png", "secret-hideaway.png", "llama.jpg", "mex.jpg", "surfing-1400X600.jpg", "rainbow_shave_ice_800.jpg"];
     $scope.titles = ["Corgi", "Hideaway", "Llama", "Mexico", "Pittedddd"]
 
     $scope.getImagePath = function(imageName) {

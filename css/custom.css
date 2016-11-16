@@ -25,9 +25,9 @@ footer {
 
 #feature-image {
   height: 100vh;
-  width: 100vw;
-  margin-left: -175px;
-  margin-right: -175px;
+  width: 101vw;
+  margin-left: calc(-56vw + 50%);
+  margin-right: -114px;
 }
 
 .social-icon {
