@@ -3,7 +3,7 @@ var app = angular.module('annaPhotography', []);
 app.controller('MainCtrl', [
 '$scope',
 function($scope){
-  $scope.image = 'Hello world!';
+  $scope.image = 'img/Corgi.png';
 }]);
 $scope.posts = [
   'post 1',
