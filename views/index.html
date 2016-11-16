@@ -5,16 +5,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="../css/custom.css" />
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/6e04e9b3c4.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-  <script src="app.js"></script>
+  <script src="../app.js"></script>
 </head>
 
-<body ng-app="annaPhotography" ng-controller="ImageCtrl">
+<body ng-app="annaPhotography" ng-controller="MainCtrl">
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -35,17 +35,12 @@
     </div>
   </div>
 </nav>
-</br>
 
-  <!-- TRYING TO GET MOUSE OVER TO EXPAND PIC AND NOT MESS UP LAYOUT -->
-    <div id="teleport-gallery" class="container-fluid bg-3 text-center">
-      <div class="row">
-        <div class="teleport-images" ng-repeat="myImage in myImages" ng-mouseover="style={'height':'410px','width':'410px'}" ng-mouseleave="style={'height':'400px','width':'400px'}">
-          <img class ="teleport-images" ng-style="style"  ng-hide="changeImage" ng-src="{{getImagePath(myImage.image)}}" alt="super awesome picture" />
-          <h2 class="teleport-titles">{{myImage.title}}</h2>
-        </div>
-      </div>
-    </div>
+<div class="jumbotron container-fluid">
+  <div class="container text-center image-holder">
+    <img id="feature-image" ng-src="../img/Corgi.png" alt="sleepy pup" />
+  </div>
+</div>
 
 <footer class="container-fluid text-center">
   <div class="social-icon">

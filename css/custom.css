@@ -28,6 +28,10 @@ footer {
   padding: 0;
 }
 
+#bio-header {
+  font-family: 'Poiret One', cursive;
+}
+
 #feature-image {
   height: 100vh;
   width: 101vw;
