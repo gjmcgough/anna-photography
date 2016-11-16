@@ -30,30 +30,19 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#">Teleport</a></li>
-        <li><a href="#">About Me</a></li>
+        <li><a href="#">About</a></li>
       </ul>
     </div>
   </div>
 </nav>
 </br>
 
-<!-- <div id="teleport-gallery" class="container-fluid bg-3 text-center">
-  <div class="row">
-    <div ng-repeat="myImage in myImages">
-      <img class="teleport-images" ng-src="{{getImagePath(myImage)}}" alt="super awesome picture" />
-    </div>
-    <div ng-repeat="title in titles">
-      <h2>{{title}}</h2>
-    </div>
-  </div>
-</div> -->
-
-
   <!-- TRYING TO GET MOUSE OVER TO EXPAND PIC AND NOT MESS UP LAYOUT -->
     <div id="teleport-gallery" class="container-fluid bg-3 text-center">
       <div class="row">
         <div class="teleport-images" ng-repeat="myImage in myImages" ng-mouseover="style={'height':'410px','width':'410px'}" ng-mouseleave="style={'height':'400px','width':'400px'}">
-          <img class ="teleport-images" ng-style="style"  ng-hide="changeImage" ng-src="{{getImagePath(myImage)}}" />
+          <img class ="teleport-images" ng-style="style"  ng-hide="changeImage" ng-src="{{getImagePath(myImage.image)}}" alt="super awesome picture" />
+          <h2 class="teleport-titles">{{myImage.title}}</h2>
         </div>
       </div>
     </div>

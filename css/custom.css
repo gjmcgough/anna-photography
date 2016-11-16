@@ -16,6 +16,7 @@ footer {
   height: 60px;
   background-color: #101010;
   padding-top: 15px;
+  margin-top: 15px;
 }
 
 .jumbotron {
@@ -58,7 +59,23 @@ footer {
 
 .photo-title {
   position: absolute;
-   top: 200px;
-   left: 0;
-   width: 100%;
+  top: 200px;
+  left: 0;
+  width: 100%;
+}
+
+.teleport-titles {
+  margin: 7px;
+  margin-left: 40px;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 50%;
+  color: white;
+  font-family: 'Poiret One', cursive;
+  letter-spacing: -1px;
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  z-index: 1;
 }
