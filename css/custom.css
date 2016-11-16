@@ -1,6 +1,6 @@
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
-  margin-bottom: 0;
+  margin-bottom: -20px;
   border-radius: 0;
 }
 
@@ -25,9 +25,9 @@ footer {
 
 #feature-image {
   height: 100vh;
-  width: 100vw;
-  margin-left: -175px;
-  margin-right: -175px;
+  width: 101vw;
+  margin-left: calc(-56vw + 50%);
+  margin-right: -114px;
 }
 
 .social-icon {
@@ -41,5 +41,20 @@ footer {
 }
 
 #navbar-title {
-  font-size: 200%;
+  font-family: 'Poiret One', cursive;
+}
+
+.teleport-images {
+  height: 400px;
+  width: 400px;
+  margin: 7px;
+  float: left;
+  position: relative;
+}
+
+.photo-title {
+  position: absolute;
+   top: 200px;
+   left: 0;
+   width: 100%;
 }
