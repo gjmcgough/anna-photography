@@ -21,8 +21,7 @@ app.controller('ImageCtrl', [
     // $scope.titles = ["Corgi", "Hideaway", "Llama", "Mexico", "Pittedddd"]
 
     $scope.getImagePath = function(imageName) {
-      console.log(imageName);
-      return  "../anna-photography/img/" + imageName;
+      return  "../img/" + imageName;
     };
 
 }]);
