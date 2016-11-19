@@ -46,7 +46,7 @@
 <div class="container-mobile">
 <div class="jumbotron container-fluid">
   <div class="container text-center image-holder">
-    <img id="feature-image" ng-src="../img/Corgi.png" alt="sleepy pup" />
+    <img id="feature-image" ng-src="../img/galleries/san_francisco/Corgi.png" alt="sleepy pup" />
   </div>
 </div>
 </div>
@@ -58,8 +58,7 @@
     <div id="teleport-gallery" class="container-fluid bg-3 text-center">
       <div class="row">
         <div class="teleport-images" ng-repeat="myCoverImage in myCoverImages" ng-mouseover="style={'height':'410px','width':'410px'}" ng-mouseleave="style={'height':'400px','width':'400px'}">
-          <!-- <a href=""></a> -->
-          <img class ="teleport-images" ng-style="style"  ng-hide="changeImage" ng-src="{{getCoverImagePath(myCoverImage.image)}}" alt="super awesome picture" />
+          <a href="#/galleries/{{$index}}"><img class ="teleport-images" ng-style="style"  ng-hide="changeImage" ng-src="{{getCoverImagePath(myCoverImage.image)}}" alt="super awesome picture" /></a>
           <h2 class="teleport-titles">{{myCoverImage.title}}</h2>
         </div>
       </div>
@@ -84,20 +83,22 @@
   <div class="row">
     <div class="col-sm-6">
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p></p>
     </div>
-    <div class="col-sm-6">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="col-sm-6" >
+      <p>SCCCCCCOOOOOOOOLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-sm-6">
+    <!-- <div class="col-sm-6 col-sm-pull-6" >
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="col-sm-6">
+    </div> -->
+    <div class="col-sm-6 col-sm-push-6">
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p></p>
+    </div>
+
+    <div class="col-sm-6 col-sm-pull-6">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
   </div>
 </div>

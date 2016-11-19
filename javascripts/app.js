@@ -47,12 +47,12 @@ app.controller('CoverImageCtrl', [
   '$scope',
   function($scope){
     $scope.myCoverImages = [
-      {image: "Corgi.png", title: "San Diego"},
-      {image: "secret-hideaway.png", title: "Chicago"},
-      {image: "llama.jpg", title: "New Orleans"},
-      {image: "mex.jpg", title: "San Francisco"},
-      {image: "surfing-1400X600.jpg", title: "Los Angeles"},
-      {image: "rainbow_shave_ice_800.jpg", title: "Baja Nor"}
+      {image: "../img/galleries/san_francisco/Corgi.png", title: "San Diego", gallery: '../img/galleries/san_francisco'},
+      {image: "../img/galleries/baja/secret-hideaway.png", title: "Chicago", gallery: '../img/galleries/baja'},
+      {image: "../img/galleries/new_orleans/llama.jpg", title: "New Orleans", gallery: '../img/galleries/new_orleans'},
+      {image: "../img/galleries/chicago/mex.jpg", title: "San Francisco", gallery: '../img/galleries/chicago'},
+      {image: "../img/galleries/los_angeles/surfing-1400X600.jpg", title: "Los Angeles", gallery: '../img/galleries/los_angeles'},
+      {image: "../img/galleries/san_diego/rainbow_shave_ice_800.jpg", title: "Baja Nor", gallery: '../img/galleries/san_diego'}
     ];
 
     // $scope.titles = ["Corgi", "Hideaway", "Llama", "Mexico", "Pittedddd"]
@@ -67,14 +67,15 @@ app.controller('GalleryImageCtrl', [
   '$scope',
   function($scope){
     $scope.myGalleryImages = [
-      {image: "rainbow_shave_ice_800.jpg"},
-      {image: "secret-hideaway.png"},
-      {image: "Corgi.png"},
-      {image: "mex.jpg"},
-      {image: "surfing-1400X600.jpg"},
-      {image: "llama.jpg"},
+      {image: "../img/galleries/san_diego/rainbow_shave_ice_800.jpg"},
+      {image: "../img/galleries/baja/secret-hideaway.png"},
+      {image: "../img/galleries/san_francisco/Corgi.png"},
+      {image: "../img/galleries/chicago/mex.jpg"},
+      {image: "../img/galleries/los_angeles/surfing-1400X600.jpg"},
+      {image: "../img/galleries/new_orleans/llama.jpg"},
     ];
 
+    // $scope.gallery = galleries.galleries[$stateParams.id];
     // $scope.titles = ["Corgi", "Hideaway", "Llama", "Mexico", "Pittedddd"]
 
     $scope.getGalleryImagePath = function(galleryImageName) {
