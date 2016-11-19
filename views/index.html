@@ -31,6 +31,7 @@
           <li><a href="#">Home</a></li>
           <li><a href="#/teleport">Teleport</a></li>
           <li><a href="#/about">About</a></li>
+          <!-- <li><a href="#/location_gallery">G</a></li> -->
         </ul>
       </div>
     </div>
@@ -56,15 +57,26 @@
   <!-- TRYING TO GET MOUSE OVER TO EXPAND PIC AND NOT MESS UP LAYOUT -->
     <div id="teleport-gallery" class="container-fluid bg-3 text-center">
       <div class="row">
-        <div class="teleport-images" ng-repeat="myImage in myImages" ng-mouseover="style={'height':'410px','width':'410px'}" ng-mouseleave="style={'height':'400px','width':'400px'}">
-          <div class="img-responsive">
-            <img class ="teleport-images" ng-style="style"  ng-hide="changeImage" ng-src="{{getImagePath(myImage.image)}}" alt="super awesome picture" />
-          </div>
-          <h2 class="teleport-titles">{{myImage.title}}</h2>
+        <div class="teleport-images" ng-repeat="myCoverImage in myCoverImages" ng-mouseover="style={'height':'410px','width':'410px'}" ng-mouseleave="style={'height':'400px','width':'400px'}">
+          <!-- <a href=""></a> -->
+          <img class ="teleport-images" ng-style="style"  ng-hide="changeImage" ng-src="{{getCoverImagePath(myCoverImage.image)}}" alt="super awesome picture" />
+          <h2 class="teleport-titles">{{myCoverImage.title}}</h2>
         </div>
       </div>
     </div>
 </script>
+
+<script type="text/ng-template" id="/location_gallery.html">
+  <!-- TRYING TO GET MOUSE OVER TO EXPAND PIC AND NOT MESS UP LAYOUT -->
+    <div id="teleport-gallery" class="container-fluid bg-3 text-center">
+      <div class="row">
+        <div class="gallery-images" ng-repeat="myGalleryImage in myGalleryImages" ng-mouseover="style={'height':'310px','width':'310px'}" ng-mouseleave="style={'height':'300px','width':'300px'}">
+            <img class ="gallery-images" ng-style="style"  ng-hide="changeImage" ng-src="{{getGalleryImagePath(myGalleryImage.image)}}" alt="super awesome picture" />
+        </div>
+      </div>
+    </div>
+</script>
+
 
 <script type="text/ng-template" id="/about.html">
 <div class="container text-center">

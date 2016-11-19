@@ -12,6 +12,11 @@
   color: #9d9d9d;
 }
 
+.row {
+  /*padding-top: 0px;*/
+  display: inline-block;
+}
+
 /* Add a gray background color and some padding to the footer */
 footer {
   position: relative;
@@ -61,6 +66,14 @@ footer {
 .teleport-images {
   height: 400px;
   width: 400px;
+  margin: 7px;
+  float: left;
+  position: relative;
+}
+
+.gallery-images {
+  height: 300px;
+  width: 300px;
   margin: 7px;
   float: left;
   position: relative;

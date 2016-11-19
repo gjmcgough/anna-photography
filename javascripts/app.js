@@ -16,7 +16,7 @@ app.config([
       .state('teleport', {
         url: '/teleport',
         templateUrl: '/teleport.html',
-        controller: 'ImageCtrl'
+        controller: 'CoverImageCtrl'
       });
 
     $stateProvider
@@ -24,6 +24,13 @@ app.config([
         url: '/about',
         templateUrl: '/about.html',
         controller: 'AboutCtrl'
+      });
+
+    $stateProvider
+      .state('location_gallery', {
+        url: '/location_gallery',
+        templateUrl: '/location_gallery.html',
+        controller: 'GalleryImageCtrl'
       });
 
   $urlRouterProvider.otherwise('index');
@@ -36,10 +43,10 @@ function($scope){
   $scope.image = '';
 }]);
 
-app.controller('ImageCtrl', [
+app.controller('CoverImageCtrl', [
   '$scope',
   function($scope){
-    $scope.myImages = [
+    $scope.myCoverImages = [
       {image: "Corgi.png", title: "San Diego"},
       {image: "secret-hideaway.png", title: "Chicago"},
       {image: "llama.jpg", title: "New Orleans"},
@@ -50,8 +57,28 @@ app.controller('ImageCtrl', [
 
     // $scope.titles = ["Corgi", "Hideaway", "Llama", "Mexico", "Pittedddd"]
 
-    $scope.getImagePath = function(imageName) {
-      return  "../img/" + imageName;
+    $scope.getCoverImagePath = function(coverImageName) {
+      return  "../img/" + coverImageName;
+    };
+
+}]);
+
+app.controller('GalleryImageCtrl', [
+  '$scope',
+  function($scope){
+    $scope.myGalleryImages = [
+      {image: "rainbow_shave_ice_800.jpg"},
+      {image: "secret-hideaway.png"},
+      {image: "Corgi.png"},
+      {image: "mex.jpg"},
+      {image: "surfing-1400X600.jpg"},
+      {image: "llama.jpg"},
+    ];
+
+    // $scope.titles = ["Corgi", "Hideaway", "Llama", "Mexico", "Pittedddd"]
+
+    $scope.getGalleryImagePath = function(galleryImageName) {
+      return  "../img/" + galleryImageName;
     };
 
 }]);
