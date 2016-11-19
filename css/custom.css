@@ -63,7 +63,7 @@ footer {
   font-size: 200%;
 }
 
-.teleport-images {
+.teleport-images, .gallery-images {
   height: 400px;
   width: 400px;
   margin: 7px;
@@ -74,9 +74,6 @@ footer {
 .gallery-images {
   height: 300px;
   width: 300px;
-  margin: 7px;
-  float: left;
-  position: relative;
 }
 
 .img-responsive {
@@ -186,10 +183,12 @@ footer {
       .navbar-collapse.collapse {
           display: none!important;
       }
-      .teleport-images {
+      .teleport-images, .gallery-images {
         height: 25vh;
         max-width: 104.25%;
         margin: 0px;
+        margin-top: 5px;
+        margin-left: -2.1%;
         margin-bottom: 10px;
         float: left;
         position: relative;
