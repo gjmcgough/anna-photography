@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Anna Lizano Photography</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/6e04e9b3c4.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+  <script src="../javascripts/app.js"></script>
+</head>
+
+<body ng-app="annaPhotography">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" id="navbar-title" href="#">ANNA LIZANO</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Home</a></li>
+          <li><a href="#/teleport">Teleport</a></li>
+          <li><a href="#/about">About</a></li>
+          <!-- <li><a href="#/location_gallery">G</a></li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- when wire up rails use this for nav bar -->
+<div ng-include="'_nav.html'"></div>
+<!-- router renders templates here -->
+<ui-view></ui-view>
+
+<script type="text/ng-template" id="/index.html">
+<div class="container-mobile">
+<div class="jumbotron container-fluid">
+  <div class="container text-center image-holder">
+    <img id="feature-image" ng-src="../img/galleries/san_francisco/Corgi.png" alt="sleepy pup" />
+  </div>
+</div>
+</div>
+
+</script>
+
+<script type="text/ng-template" id="/teleport.html">
+  <!-- TRYING TO GET MOUSE OVER TO EXPAND PIC AND NOT MESS UP LAYOUT -->
+    <div id="teleport-gallery" class="container-fluid bg-3 text-center">
+      <div class="row">
+        <div class="teleport-images" ng-repeat="myCoverImage in myCoverImages" ng-mouseover="style={'height':'410px','width':'410px'}" ng-mouseleave="style={'height':'400px','width':'400px'}">
+          <a href="#/galleries/{{$index}}"><img class ="teleport-images" ng-style="style"  ng-hide="changeImage" ng-src="{{getCoverImagePath(myCoverImage.image)}}" alt="super awesome picture" /></a>
+          <h2 class="teleport-titles">{{myCoverImage.title}}</h2>
+        </div>
+      </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="/location_gallery.html">
+  <!-- TRYING TO GET MOUSE OVER TO EXPAND PIC AND NOT MESS UP LAYOUT -->
+    <div id="teleport-gallery" class="container-fluid bg-3 text-center">
+      <div class="row">
+        <div class="gallery-images" ng-repeat="myGalleryImage in myGalleryImages" ng-mouseover="style={'height':'310px','width':'310px'}" ng-mouseleave="style={'height':'300px','width':'300px'}">
+            <img class ="gallery-images" ng-style="style"  ng-hide="changeImage" ng-src="{{getGalleryImagePath(myGalleryImage.image)}}" alt="super awesome picture" />
+        </div>
+      </div>
+    </div>
+</script>
+
+
+<script type="text/ng-template" id="/about.html">
+<div class="container text-center">
+  <br><h3 id="bio-header">Capturing the Moment</h3><br>
+  <div class="row">
+    <div class="col-sm-6">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-6" >
+      <p>SCCCCCCOOOOOOOOLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- <div class="col-sm-6 col-sm-pull-6" >
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div> -->
+    <div class="col-sm-6 col-sm-push-6">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+
+    <div class="col-sm-6 col-sm-pull-6">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
+</script>
+
+
+<footer class="container-fluid text-center">
+    <a href="https://www.instagram.com/anna.bananasss/"><i class="fa fa-instagram fa-2x social-icon" aria-hidden="true"></i></a>
+    <a href="mailto:alizano-11@sandiego.edu?subject=Anna_Lizano_Photography"><i class="fa fa-envelope fa-2x social-icon" aria-hidden="true"></i></a>
+</footer>
+
+</body>
+</html>
