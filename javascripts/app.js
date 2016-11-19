@@ -12,15 +12,23 @@ app.config([
         controller: 'MainCtrl'
       });
 
-      $stateProvider
-        .state('teleport', {
-          url: '/teleport',
-          templateUrl: '/teleport.html',
-          controller: 'ImageCtrl'
-        });
+    $stateProvider
+      .state('teleport', {
+        url: '/teleport',
+        templateUrl: '/teleport.html',
+        controller: 'ImageCtrl'
+      });
 
-      $urlRouterProvider.otherwise('index');
-  }]);
+    $stateProvider
+      .state('about', {
+        url: '/about',
+        templateUrl: '/about.html',
+        controller: 'AboutCtrl'
+      });
+
+  $urlRouterProvider.otherwise('index');
+
+}]);
 
 app.controller('MainCtrl', [
 '$scope',
@@ -46,4 +54,10 @@ app.controller('ImageCtrl', [
       return  "../img/" + imageName;
     };
 
+}]);
+
+app.controller('AboutCtrl', [
+  '$scope',
+  function($scope){
+    $scope.bio = '';
 }]);

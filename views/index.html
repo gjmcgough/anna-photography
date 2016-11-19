@@ -28,14 +28,16 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#/teleport.html">Teleport</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#/teleport">Teleport</a></li>
+          <li><a href="#/about">About</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
+<!-- when wire up rails use this for nav bar -->
+<div ng-include="'_nav.html'"></div>
 <!-- router renders templates here -->
 <ui-view></ui-view>
 
@@ -63,6 +65,32 @@
       </div>
     </div>
 </script>
+
+<script type="text/ng-template" id="/about.html">
+<div class="container text-center">
+  <br><h3 id="bio-header">Capturing the Moment</h3><br>
+  <div class="row">
+    <div class="col-sm-6">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <p></p>
+    </div>
+    <div class="col-sm-6">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="col-sm-6">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <p></p>
+    </div>
+  </div>
+</div>
+</script>
+
 
 <footer class="container-fluid text-center">
   <div class="social-icon">

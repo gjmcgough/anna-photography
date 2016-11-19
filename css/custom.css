@@ -8,6 +8,10 @@
   font-family: 'Poiret One', cursive;
 }
 
+.navbar-inverse {
+  color: #9d9d9d;
+}
+
 /* Add a gray background color and some padding to the footer */
 footer {
   position: relative;
