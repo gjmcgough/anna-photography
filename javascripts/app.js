@@ -1,4 +1,26 @@
-var app = angular.module('annaPhotography', []);
+var app = angular.module('annaPhotography', ['ui.router']);
+
+app.config([
+  '$stateProvider',
+  '$urlRouterProvider',
+  function($stateProvider, $urlRouterProvider) {
+
+    $stateProvider
+      .state('index', {
+        url: '/index',
+        templateUrl: '/index.html',
+        controller: 'MainCtrl'
+      });
+
+      $stateProvider
+        .state('teleport', {
+          url: '/teleport',
+          templateUrl: '/teleport.html',
+          controller: 'ImageCtrl'
+        });
+
+      $urlRouterProvider.otherwise('index');
+  }]);
 
 app.controller('MainCtrl', [
 '$scope',

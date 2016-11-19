@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Anna Lizano Photography</title>
@@ -35,18 +35,20 @@
     </div>
   </div>
 </nav>
-</br>
+</br> -->
 
   <!-- TRYING TO GET MOUSE OVER TO EXPAND PIC AND NOT MESS UP LAYOUT -->
     <div id="teleport-gallery" class="container-fluid bg-3 text-center">
       <div class="row">
         <div class="teleport-images" ng-repeat="myImage in myImages" ng-mouseover="style={'height':'410px','width':'410px'}" ng-mouseleave="style={'height':'400px','width':'400px'}">
-          <img class ="teleport-images" ng-style="style"  ng-hide="changeImage" ng-src="{{getImagePath(myImage.image)}}" alt="super awesome picture" />
+          <div class="img-responsive">
+            <img class ="teleport-images" ng-style="style"  ng-hide="changeImage" ng-src="{{getImagePath(myImage.image)}}" alt="super awesome picture" />
+          </div>
           <h2 class="teleport-titles">{{myImage.title}}</h2>
         </div>
       </div>
     </div>
-
+<!--
 <footer class="container-fluid text-center">
   <div class="social-icon">
     <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
@@ -57,4 +59,4 @@
 </footer>
 
 </body>
-</html>
+</html> -->

@@ -20,7 +20,6 @@ footer {
 }
 
 .jumbotron {
-  /*height: 480px;*/
   margin-bottom: 0;
   background-size: cover;
   /* vh stands for viewport height!*/
@@ -61,6 +60,14 @@ footer {
   margin: 7px;
   float: left;
   position: relative;
+}
+
+.img-responsive {
+  /*overflow: hidden;*/
+  /*object-fit: cover;*/
+  width: 100%;
+  height: 100%;
+
 }
 
 .photo-title {
