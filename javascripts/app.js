@@ -67,19 +67,19 @@ app.controller('GalleryImageCtrl', [
   '$scope',
   function($scope){
     $scope.myGalleryImages = [
-      {image: "../img/galleries/san_diego/rainbow_shave_ice_800.jpg"},
-      {image: "../img/galleries/baja/secret-hideaway.png"},
-      {image: "../img/galleries/san_francisco/Corgi.png"},
-      {image: "../img/galleries/chicago/mex.jpg"},
-      {image: "../img/galleries/los_angeles/surfing-1400X600.jpg"},
-      {image: "../img/galleries/new_orleans/llama.jpg"},
+      {image: "san_diego/rainbow_shave_ice_800.jpg"},
+      {image: "baja/secret-hideaway.png"},
+      {image: "san_francisco/Corgi.png"},
+      {image: "chicago/mex.jpg"},
+      {image: "los_angeles/surfing-1400X600.jpg"},
+      {image: "new_orleans/llama.jpg"},
     ];
 
     // $scope.gallery = galleries.galleries[$stateParams.id];
     // $scope.titles = ["Corgi", "Hideaway", "Llama", "Mexico", "Pittedddd"]
 
     $scope.getGalleryImagePath = function(galleryImageName) {
-      return  "../img/" + galleryImageName;
+      return  "../img/galleries/" + galleryImageName;
     };
 
 }]);
