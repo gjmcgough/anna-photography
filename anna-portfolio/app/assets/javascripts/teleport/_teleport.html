@@ -1,0 +1,11 @@
+<script type="text/ng-template" id="/teleport.html">
+<!-- TRYING TO GET MOUSE OVER TO EXPAND PIC AND NOT MESS UP LAYOUT -->
+  <div id="teleport-gallery" class="container-fluid bg-3 text-center">
+    <div class="row">
+      <div class="teleport-images" ng-repeat="myCoverImage in myCoverImages" ng-mouseover="style={'height':'410px','width':'410px'}" ng-mouseleave="style={'height':'400px','width':'400px'}">
+        <a href="#/galleries/{{$index}}"><img class ="teleport-images" ng-style="style"  ng-hide="changeImage" ng-src="{{getCoverImagePath(myCoverImage.image)}}" alt="super awesome picture" /></a>
+        <h2 class="teleport-titles">{{myCoverImage.title}}</h2>
+      </div>
+    </div>
+  </div>
+</script>
