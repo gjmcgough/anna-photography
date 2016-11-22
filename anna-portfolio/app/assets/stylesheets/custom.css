@@ -136,6 +136,10 @@ footer {
   }
 
     @media (max-width: 840px) {
+      * {
+          max-width: 420px;
+          margin: 0 auto;
+      }
       .navbar-header {
           float: none;
       }
@@ -159,13 +163,6 @@ footer {
       .navbar-nav {
           float: none!important;
           margin-top: 7.5px;
-      }
-      .navbar-nav>li {
-          float: none;
-      }
-      .navbar-nav>li>a {
-          padding-top: 10px;
-          padding-bottom: 10px;
       }
       .collapse.in{
           display:block !important;
@@ -233,7 +230,3 @@ footer {
         margin-left: -15px;
       }
     }
-
-    @media (max-width: 1200px) {
-
-}
