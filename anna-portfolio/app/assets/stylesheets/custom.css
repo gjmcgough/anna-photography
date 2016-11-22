@@ -58,7 +58,7 @@ footer {
   /*margin-bottom: 2%;*/
 }
 
-#navbar-title {
+.navbar-brand {
   font-family: 'Poiret One', cursive;
   font-size: 200%;
 }
@@ -150,9 +150,9 @@ footer {
           border-top: 1px solid transparent;
           box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
       }
-      .navbar-collapse.collapse {
+      /*.navbar-collapse, .collapse {
           display: none!important;
-      }
+      }*/
       #feature-image {
         width: 125%;
         height: 100%;
@@ -180,9 +180,11 @@ footer {
           border-top: 1px solid transparent;
           box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
       }
-      .navbar-collapse.collapse {
+
+      /*.navbar-collapse, .collapse {
           display: none!important;
-      }
+      }*/
+      
       .teleport-images, .gallery-images {
         height: 25vh;
         max-width: 104.25%;

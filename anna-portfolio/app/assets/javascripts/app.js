@@ -36,3 +36,7 @@ app.config([
   $urlRouterProvider.otherwise('index');
 
 }]);
+
+function NavBarCtrl($scope) {
+    $scope.isCollapsed = true;
+}
