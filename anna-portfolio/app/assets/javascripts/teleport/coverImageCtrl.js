@@ -15,7 +15,7 @@ app.controller('CoverImageCtrl', [
     // $scope.titles = ["Corgi", "Hideaway", "Llama", "Mexico", "Pittedddd"]
 
     $scope.getCoverImagePath = function(coverImageName) {
-      return  "../images/galleries/" + coverImageName;
+      return  "../../images/galleries/" + coverImageName;
     };
 
 }]);
