@@ -28,7 +28,7 @@ app.config([
 
     $stateProvider
       .state('location_gallery', {
-        url: '/location_gallery',
+        url: '/location_gallery/{id}',
         templateUrl: 'location_gallery/_location_gallery.html',
         controller: 'GalleryImageCtrl'
       });
