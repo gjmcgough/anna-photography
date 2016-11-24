@@ -8,7 +8,7 @@ app.config([
     $stateProvider
       .state('index', {
         url: '/index',
-        templateUrl: "<%=asset_path 'javascripts/index/_index.html'%>",
+        templateUrl: 'index/_index.html',
         controller: 'MainCtrl'
       });
 
