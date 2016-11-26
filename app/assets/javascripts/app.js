@@ -37,6 +37,6 @@ app.config([
 
 }]);
 
-function NavBarCtrl($scope) {
-    $scope.isCollapsed = true;
-}
+// function NavBarCtrl($scope) {
+//     $scope.isCollapsed = true;
+// }

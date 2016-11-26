@@ -15,8 +15,10 @@
 
   <body ng-app="annaPhotography">
 
-    <div ng-include="<%= asset_path('_nav.html.erb')%>"></div>
+    <div ng-include="'nav/_nav.html'"></div>
+
     <ui-view></ui-view>
+
     <div ng-include="'footer/_footer.html'"></div>
 
   </body>
