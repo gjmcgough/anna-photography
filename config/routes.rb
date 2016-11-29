@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'application#angular'
 
   resources :galleries, only: [:index, :show] do
-    resources :comments, only: [:index, :show] do
+    resources :images, only: [:index, :show] do
     end
   end
 
