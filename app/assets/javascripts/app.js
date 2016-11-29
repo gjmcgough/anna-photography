@@ -1,4 +1,4 @@
-var app = angular.module('annaPhotography', ['ui.router', 'templates']);
+var app = angular.module('annaPhotography', ['ui.router', 'templates', 'Devise']);
 
 app.config([
   '$stateProvider',

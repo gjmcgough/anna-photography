@@ -1,6 +1,10 @@
 class GalleriesController < ApplicationController
   def index
-    respond_with Gallery.all
+    @galleries = Gallery.includes(:images)
+    respond_with do |format|
+      format.html @galleries
+      format.json @galleries
+    end
   end
 
   def show

@@ -8,7 +8,7 @@
   font-family: 'Poiret One', cursive;
 }
 
-.navbar-inverse {
+.navbar-inverse, .footer-font-color {
   color: #9d9d9d;
 }
 
