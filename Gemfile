@@ -26,7 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'angular-rails-templates'
 gem 'sprockets', '3.0.0'
 gem 'rails_12factor', group: :production
-
+gem 'aws-sdk', '~> 1.5.7'	# amazon web services gem
+gem 'paperclip' 		# paperclip gem for file management
+gem 'dotenv-rails', :groups => [:development, :test]
+gem 'responders', '~> 2.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
