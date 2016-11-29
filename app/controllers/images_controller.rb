@@ -1,4 +1,5 @@
 class ImagesController < ApplicationController
+
   def index
     respond_with Images.all
   end
@@ -6,4 +7,5 @@ class ImagesController < ApplicationController
   def show
     respond_with Images.find(params[:id])
   end
+  
 end
