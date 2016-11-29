@@ -23,7 +23,7 @@ app.config([
       .state('about', {
         url: '/about',
         templateUrl: 'about/_about.html',
-        controller: 'AboutCtrl'
+        controller: 'BioCtrl'
       });
 
     $stateProvider

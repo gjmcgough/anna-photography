@@ -1,6 +1,6 @@
 var app = angular.module('annaPhotography');
 
-app.controller('AboutCtrl', [
+app.controller('BioCtrl', [
   '$scope',
   function($scope){
 
