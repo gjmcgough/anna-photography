@@ -4,9 +4,4 @@ class Gallery < ActiveRecord::Base
 		med: "200x200",
 		large: "400x400"
 	}
-
-  def all_galleries
-    return get_galleries
-  end
-
 end
