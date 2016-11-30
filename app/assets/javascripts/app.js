@@ -33,6 +33,13 @@ app.config([
         controller: 'GalleryImageCtrl'
       });
 
+      $stateProvider
+        .state('new', {
+          url: '/new',
+          templateUrl: 'uploads/_new.html',
+          controller: 'BioCtrl'
+        });
+
   $urlRouterProvider.otherwise('index');
 
 }]);
