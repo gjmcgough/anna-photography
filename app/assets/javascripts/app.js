@@ -30,15 +30,15 @@ app.config([
       .state('location_gallery', {
         url: '/location_gallery/{id}',
         templateUrl: 'location_gallery/_location_gallery.html',
-        controller: 'GalleryImageCtrl'
+        controller: 'GalleryCtrl'
       });
 
-      $stateProvider
-        .state('new', {
-          url: '/new',
-          templateUrl: 'uploads/_new.html',
-          controller: 'BioCtrl'
-        });
+    $stateProvider
+      .state('new', {
+        url: '/new',
+        templateUrl: 'uploads/_new.html',
+        controller: 'MainCtrl'
+      });
 
   $urlRouterProvider.otherwise('index');
 

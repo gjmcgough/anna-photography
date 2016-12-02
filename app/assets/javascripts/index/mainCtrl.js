@@ -2,7 +2,12 @@ var app = angular.module('annaPhotography');
 
 app.controller('MainCtrl', [
 '$scope',
-'image',
+'galleries',
 function($scope){
-  $scope.image = '';
+  $scope.galleries = galleries.galleries;
+
+  $scope.makeGallery = function(){
+    $scope.galleries.push({title: 'Zimbabwe!'});
+  };
+
 }]);
