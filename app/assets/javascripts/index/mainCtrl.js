@@ -10,4 +10,8 @@ function($scope){
     $scope.galleries.push({title: 'Zimbabwe!'});
   };
 
+   $scope.data = {
+    model: null,
+    availableOptions: $scope.galleries
+   };
 }]);

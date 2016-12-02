@@ -7,6 +7,18 @@
 </form>
 
 <form ng-submit="addPhoto()">
-  Add New Photo(s):
-  
+  <div class="btn-group">
+    <h3>Pick a Gallery:</h3>
+    <select class="form-control" ng-repeat="gallery in galleries">
+      <option value="{{gallery.id}}">{{gallery.title}}</option>
+    </select>
+
+    <select class="selectpicker show-tick" name=>
+      <option value="false">No</option>
+      <option value="true">Yes</option>
+    </select>
+  </div>
+
+  <input id="file-input" type="file" ngf-select="upload($file)" ng-model="image" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB" ngf-min-height="100">
+  <button ng-click="addPhoto()">Upload Image</button>
 </form>
