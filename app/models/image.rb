@@ -1,4 +1,6 @@
 class Image < ActiveRecord::Base
+  belongs_to :galleries
+
   has_attached_file :image, styles: {
 		small: "64x64",
 		med: "200x200",
