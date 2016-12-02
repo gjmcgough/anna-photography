@@ -16,7 +16,7 @@ app.config([
       .state('teleport', {
         url: '/teleport',
         templateUrl: 'teleport/_teleport.html',
-        controller: 'CoverImageCtrl'
+        controller: 'GalleryCtrl'
       });
 
     $stateProvider

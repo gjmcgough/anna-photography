@@ -1,6 +1,6 @@
 var app = angular.module('annaPhotography');
 
-app.controller('CoverImageCtrl', [
+app.controller('GalleryCtrl', [
   '$scope',
   function($scope){
     $scope.myCoverImages = [
