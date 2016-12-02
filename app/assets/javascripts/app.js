@@ -1,7 +1,10 @@
 var app = angular.module('annaPhotography', ['ui.router', 'templates', 'Devise']);
 
 app.factory('galleries', [function(){
-
+  var o = {
+    galleries: []
+ };
+ return o;
 }])
 
 app.config([
