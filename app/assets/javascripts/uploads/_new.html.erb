@@ -9,7 +9,7 @@
 <form ng-submit="addPhoto()">
   <div class="btn-group">
     <h3>Pick a Gallery:</h3>
-    <select class="form-control" ng-repeat="gallery in galleries">
+    <select class="form-control" ng-options="gallery in galleries">
       <option value="{{gallery.id}}">{{gallery.title}}</option>
     </select>
 
