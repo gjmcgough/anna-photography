@@ -12,4 +12,8 @@ class GalleriesController < ApplicationController
     respond_with Gallery.create(gallery_params)
   end
 
+  private
+  def gallery_params
+    params.require(:gallery).permit(:title)
+  end
 end
