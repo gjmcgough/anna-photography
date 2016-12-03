@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'application#angular'
 
-  resources :galleries, only: [:index, :show] do
+  resources :galleries, only: [:index, :show, :create] do
     resources :images, only: [:index, :show] do
     end
   end

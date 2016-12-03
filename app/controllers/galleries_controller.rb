@@ -7,4 +7,9 @@ class GalleriesController < ApplicationController
   def show
     respond_with Gallery.find(params[:id])
   end
+
+  def create
+    respond_with Gallery.create(gallery_params)
+  end
+
 end
