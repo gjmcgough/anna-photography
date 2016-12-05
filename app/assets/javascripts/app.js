@@ -56,14 +56,14 @@ app.config([
       .state('upload_image', {
         url: '/upload_image',
         templateUrl: 'uploads/_upload_image.html',
-        controller: 'UploadCtrl',
+        controller: 'CreateImageCtrl',
         resolve: {
-          postPromise: ['images', function(images){
-            return images.getImages();
+          postPromise: ['galleries', function(galleries){
+            return galleries.getGalleries();
           }]
         }
       });
-      
+
   $urlRouterProvider.otherwise('index');
 
 }]);
