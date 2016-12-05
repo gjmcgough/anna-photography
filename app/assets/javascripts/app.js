@@ -38,6 +38,13 @@ app.config([
         url: '/new',
         templateUrl: 'uploads/_new.html',
         controller: 'MainCtrl',
+      });
+
+    $stateProvider
+      .state('new_gallery', {
+        url: '/new_gallery',
+        templateUrl: 'uploads/_new_gallery.html',
+        controller: 'MainCtrl',
         resolve: {
           postPromise: ['galleries', function(galleries){
             return galleries.getGalleries();
@@ -45,6 +52,18 @@ app.config([
         }
       });
 
+    $stateProvider
+      .state('upload_image', {
+        url: '/upload_image',
+        templateUrl: 'uploads/_upload_image.html',
+        controller: 'UploadCtrl',
+        resolve: {
+          postPromise: ['images', function(images){
+            return images.getImages();
+          }]
+        }
+      });
+      
   $urlRouterProvider.otherwise('index');
 
 }]);

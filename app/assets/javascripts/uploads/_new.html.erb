@@ -1,26 +1,6 @@
 <h1>Hey Sexy</h1>
 
-<h2>Create a New Gallery</h2>
-<form ng-submit="makeGallery()">
-  New Location Gallery:
-  <input type="text" ng-model="title" placeholder="New Gallery Name"></input>
-  <button ng-click="makeGallery()">Make New Gallery</button>
-</form>
 
-<h2>Add an Image</h2>
-<form ng-submit="addPhoto()">
-  <div class="btn-group">
-    Pick a Gallery:
-    <select class="form-control" >
-      <option ng-model="gallery.id" ng-repeat="gallery in galleries">{{gallery.title}}</option>
-    </select>
-    Make this image the gallery's cover letter?
-    <select class="selectpicker show-tick" name=>
-      <option value="false">No</option>
-      <option value="true">Yes</option>
-    </select>
-  </div>
-  Select Image to Upload:
-  <input id="file-input" type="file" ngf-select="upload($file)" ng-model="image" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB" ngf-min-height="100">
-  <button ng-click="addPhoto()">Upload Image</button>
-</form>
+
+<h2><a href="#/new_gallery"> Create New Gallery</a></h2>
+<h2><a href="#/upload_image">Upload New Image</a></h2>
