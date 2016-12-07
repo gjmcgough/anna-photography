@@ -36,15 +36,20 @@ app.config([
     $stateProvider
       .state('new', {
         url: '/new',
-        templateUrl: 'uploads/_new.html',
-        controller: 'MainCtrl',
+        templateUrl: 'new_gallery/_new.html',
+        controller: 'NewGalleryCtrl',
+        resolve: {
+          postPromise: ['galleries', function(galleries){
+            return galleries.getGalleries();
+          }]
+        }
       });
 
     $stateProvider
       .state('new_gallery', {
         url: '/new_gallery',
-        templateUrl: 'uploads/_new_gallery.html',
-        controller: 'MainCtrl',
+        templateUrl: 'new_gallery/_new_gallery.html',
+        controller: 'NewGalleryCtrl',
         resolve: {
           postPromise: ['galleries', function(galleries){
             return galleries.getGalleries();
@@ -54,12 +59,12 @@ app.config([
 
     $stateProvider
       .state('upload_image', {
-        url: '/upload_image',
+        url: '/upload_image/{id}',
         templateUrl: 'uploads/_upload_image.html',
-        controller: 'CreateImageCtrl',
+        controller: 'UploadImageCtrl',
         resolve: {
-          postPromise: ['galleries', function(galleries){
-            return galleries.getGalleries();
+          gallery: ['$stateParams', 'galleries', function($stateParams, galleries){
+            return galleries.get($stateParams.id);
           }]
         }
       });

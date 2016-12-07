@@ -3,13 +3,10 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'application#angular'
 
-  resources :galleries, only: [:index, :show, :create] do
-    resources :images, only: [:index, :show] do
+  resources :galleries, only: [:index, :show, :create, :destroy] do
+    resources :images, only: [:index, :show, :create, :destroy] do
     end
   end
-
-  resources :uploads, only: [:create, :new, :destroy]
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,17 +1,17 @@
 <h2>Add an Image</h2>
-<form ng-submit="addPhoto()">
+<form ng-submit="upload(file)">
   <div class="btn-group">
-    Pick a Gallery:
+    <!-- Pick a Gallery:
     <select class="form-control" >
       <option ng-model="gallery.id" ng-repeat="gallery in galleries">{{gallery.title}}</option>
-    </select>
+    </select> -->
     Make this image the gallery's cover letter?
-    <select class="selectpicker show-tick" name=>
-      <option value="false">No</option>
+    <select class="selectpicker show-tick" ng-model="image[coverBool]">
+      <option value="false" selected>No</option>
       <option value="true">Yes</option>
     </select>
   </div>
   Select Image to Upload:
-  <input id="file-input" type="file" ngf-select="upload($file)" ng-model="image" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB" ngf-min-height="100">
-  <button ng-click="addPhoto()">Upload Image</button>
+  <input type="file" ng-model="file">
+  <button type="submit">Upload Image(s)</button>
 </form>

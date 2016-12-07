@@ -7,12 +7,12 @@ app.factory('images',[
       images: []
     };
 
-    o.getImages = function(){
-      return $http.get('/galleries/{id}/images.json').success(function(data){
+    o.getImages = function(id){
+      return $http.get('/galleries/' + id + '/images.json').success(function(data){
         angular.copy(data, o.images);
       });
     };
-  // 
+  //
   //   $scope.upload = function(file){
   //     Upload.upload({
   //       url: 'galleries/{id}/images',
