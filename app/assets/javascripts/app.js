@@ -16,7 +16,7 @@ app.config([
       .state('teleport', {
         url: '/teleport',
         templateUrl: 'teleport/_teleport.html',
-        controller: 'GalleryCtrl'
+        controller: 'TeleportCtrl'
       });
 
     $stateProvider
@@ -30,7 +30,7 @@ app.config([
       .state('location_gallery', {
         url: '/location_gallery/{id}',
         templateUrl: 'location_gallery/_location_gallery.html',
-        controller: 'GalleryCtrl'
+        controller: 'LocationGalleryCtrl'
       });
 
     $stateProvider
