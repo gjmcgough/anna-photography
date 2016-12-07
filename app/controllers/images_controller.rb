@@ -9,7 +9,7 @@ class ImagesController < ApplicationController
   end
 
   def create
-    image = Image.new
+    image = Image.new(image_params)
     if image.save
       render json: {success: true}
     else
