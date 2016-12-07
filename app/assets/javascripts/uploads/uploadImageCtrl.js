@@ -14,10 +14,11 @@ app.controller('UploadImageCtrl', [
         method: 'POST',
         fields: {
           'image[gallery_id]': gallery.id,
-          'image[cover_bool]': false,
+          'image[cover_image]': false,
+          'image[image]': file,
         },
         file: file,
-        fileFormDataName: 'image[image]'
+        // fileFormDataName: 'image[image]'
       });
     };
 }]);

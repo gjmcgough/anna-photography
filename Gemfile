@@ -23,12 +23,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'dotenv-rails', :groups => [:development, :test]	# env variable to keep sensitive data hiddengem 'responders', '~> 2.0'
 gem 'angular-rails-templates'
 gem 'sprockets', '3.0.0'
 gem 'rails_12factor', group: :production
-gem 'aws-sdk', '~> 1.5.7'	# amazon web services gem
+gem 'aws-sdk'	# amazon web services gem
 gem 'angular-file-upload-rails', '~> 1.6.1.1'
-gem 'dotenv-rails', :groups => [:development, :test]	# env variable to keep sensitive data hiddengem 'responders', '~> 2.0'
 gem 'devise', '~> 3.4.0'
 gem 'paperclip'
 group :development, :test do

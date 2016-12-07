@@ -8,5 +8,5 @@ class Image < ActiveRecord::Base
 	}
 
 	# Validate the attached image is image/jpg, image/png, etc
-	validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+	validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 end
