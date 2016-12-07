@@ -27,10 +27,10 @@ gem 'angular-rails-templates'
 gem 'sprockets', '3.0.0'
 gem 'rails_12factor', group: :production
 gem 'aws-sdk', '~> 1.5.7'	# amazon web services gem
-gem 'paperclip' 		# paperclip gem for file management
+gem 'angular-file-upload-rails', '~> 1.6.1.1'
 gem 'dotenv-rails', :groups => [:development, :test]	# env variable to keep sensitive data hiddengem 'responders', '~> 2.0'
 gem 'devise', '~> 3.4.0'
-
+gem 'paperclip'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
