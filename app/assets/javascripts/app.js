@@ -1,4 +1,4 @@
-var app = angular.module('annaPhotography', ['ui.router', 'templates', 'Devise']);
+var app = angular.module('annaPhotography', ['ui.router', 'templates', 'Devise', 'ngFileUpload']);
 
 app.config([
   '$stateProvider',
@@ -16,7 +16,7 @@ app.config([
       .state('teleport', {
         url: '/teleport',
         templateUrl: 'teleport/_teleport.html',
-        controller: 'GalleryCtrl'
+        controller: 'TeleportCtrl'
       });
 
     $stateProvider
@@ -30,17 +30,41 @@ app.config([
       .state('location_gallery', {
         url: '/location_gallery/{id}',
         templateUrl: 'location_gallery/_location_gallery.html',
-        controller: 'GalleryCtrl'
+        controller: 'LocationGalleryCtrl'
       });
 
     $stateProvider
       .state('new', {
         url: '/new',
-        templateUrl: 'uploads/_new.html',
-        controller: 'MainCtrl',
+        templateUrl: 'new_gallery/_new.html',
+        controller: 'NewGalleryCtrl',
         resolve: {
           postPromise: ['galleries', function(galleries){
             return galleries.getGalleries();
+          }]
+        }
+      });
+
+    $stateProvider
+      .state('new_gallery', {
+        url: '/new_gallery',
+        templateUrl: 'new_gallery/_new_gallery.html',
+        controller: 'NewGalleryCtrl',
+        resolve: {
+          postPromise: ['galleries', function(galleries){
+            return galleries.getGalleries();
+          }]
+        }
+      });
+
+    $stateProvider
+      .state('upload_image', {
+        url: '/upload_image/{id}',
+        templateUrl: 'uploads/_upload_image.html',
+        controller: 'UploadImageCtrl',
+        resolve: {
+          gallery: ['$stateParams', 'galleries', function($stateParams, galleries){
+            return galleries.get($stateParams.id);
           }]
         }
       });

@@ -10,9 +10,8 @@ class ImagesController < ApplicationController
 
   def create
     image = Image.new
-    image.save
-    if image.save?
-      respond_with image
+    if image.save
+      render json: {success: true}
     else
       status 404
     end
@@ -20,8 +19,7 @@ class ImagesController < ApplicationController
 
   def update
    image = Image.find(params[:id])
-   image.update(image_params)
-   if image.save?
+   if image.update(image_params)
      respond_with image
    else
      status 404
@@ -30,7 +28,7 @@ class ImagesController < ApplicationController
 
  private
  def image_params
-   params.require(:image).permit(:image)
+   params.require(:image).permit(:image, :cover_bool, :gallery_id)
  end
 
 end

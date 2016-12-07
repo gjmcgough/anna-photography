@@ -16,7 +16,7 @@ app.config([
       .state('teleport', {
         url: '/teleport',
         templateUrl: '/teleport.html',
-        controller: 'GalleryCtrl'
+        controller: 'TeleportCtrl'
       });
 
     $stateProvider
@@ -43,7 +43,7 @@ function($scope){
   $scope.image = '';
 }]);
 
-app.controller('GalleryCtrl', [
+app.controller('TeleportCtrl', [
   '$scope',
   function($scope){
     $scope.myCoverImages = [

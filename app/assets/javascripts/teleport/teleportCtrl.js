@@ -1,6 +1,6 @@
 var app = angular.module('annaPhotography');
 
-app.controller('GalleryCtrl', [
+app.controller('TeleportCtrl', [
   '$scope',
   function($scope){
 
