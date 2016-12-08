@@ -17,7 +17,9 @@ class ImagesController < ApplicationController
     if image.save
       @images = Image.where(gallery_id: params[:gallery_id])
       puts "{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{#{@images}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
-      respond_with image
+      respond_to do |format|
+         format.json { render :json => @images }
+      end
     else
       status 404
     end
