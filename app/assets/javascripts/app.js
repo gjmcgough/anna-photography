@@ -65,6 +65,9 @@ app.config([
         resolve: {
           gallery: ['$stateParams', 'galleries', function($stateParams, galleries){
             return galleries.get($stateParams.id);
+          }],
+          postPromise: ['$stateParams', 'galleries', function($stateParams, galleries){
+            return galleries.getImages($stateParams.id);
           }]
         }
       });

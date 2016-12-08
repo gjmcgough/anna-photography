@@ -4,7 +4,8 @@ app.factory('galleries', [
   '$http',
   function($http){
   var o = {
-    galleries: []
+    galleries: [],
+    images: []
  };
 
  o.getGalleries = function() {
@@ -22,6 +23,13 @@ app.factory('galleries', [
 o.get = function(id){
   return $http.get('/galleries/' + id + '.json').then(function(res){
     return res.data;
+  });
+};
+
+o.getImages = function(id){
+  return $http.get('/galleries/' + id + '/images.json')
+    .then(function(response){
+      return response.data
   });
 };
 
