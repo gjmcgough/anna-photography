@@ -1,24 +1,18 @@
 <h2>Add an Image</h2>
 <form ng-submit="upload(file)">
   <div class="btn-group">
-    <!-- Pick a Gallery:
-    <select class="form-control" >
-      <option ng-model="gallery.id" ng-repeat="gallery in galleries">{{gallery.title}}</option>
-    </select> -->
     Make this image the gallery's cover letter?
-    <select class="selectpicker show-tick" ng-model="image[coverBool]">
-      <option value="false" selected>No</option>
-      <option value="true">Yes</option>
-    </select>
-  </div>
+    <input type='radio' name='cover-bool' ng-model='coverBool' value='true' />YES
+    <input type='radio' name='cover-bool' ng-model='coverBool' value='false' /> NO
+  </div><br><br>
   Select Image to Upload:
   <input type="file" ngf-select ng-model="file" name="image">
   <button type="submit">Upload Image(s)</button>
-</form>
+</form><br><br>
 
 <div id="upload-gallery" class="container-fluid bg-3 text-center">
   <div class="row">
-    <div class="gallery-images" ng-repeat="image in images" ng-mouseover="style={'height':'160px','width':'160px'}" ng-mouseleave="style={'height':'150px','width':'150px'}">
+    <div class="gallery-images" ng-repeat="image in images" ng-mouseover="style={'height':'310px','width':'310px'}" ng-mouseleave="style={'height':'300px','width':'300px'}">
         <img class ="gallery-images" ng-style="style" ng-src="{{ src }}" ng-hide="changeImage" alt="super awesome picture" />
     </div>
   </div>
