@@ -10,7 +10,7 @@ app.controller('UploadImageCtrl', [
     $scope.gallery = gallery;
     $scope.images = galleries.images;
 
-    console.log($scope.images[8]);
+    console.log($scope.images);
     console.log($stateParams.id);
 
     $scope.upload = function(file){
