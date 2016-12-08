@@ -1,8 +1,10 @@
 class ImagesController < ApplicationController
 
   def index
-    gallery = Gallery.find(params[:gallery_id])
-    respond_with gallery
+    @images = Image.where(gallery_id: params[:gallery_id])
+    respond_to do |format|
+       format.json { render :json => @images.to_a }
+    end
   end
 
   def show
@@ -16,9 +18,9 @@ class ImagesController < ApplicationController
     # images = gallery.images
     if image.save
       @images = Image.where(gallery_id: params[:gallery_id])
-      puts "{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{#{@images}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
+      puts "{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{#{@images.to_a}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
       respond_to do |format|
-         format.json { render :json => @images }
+         format.json { render :json => @images.to_a }
       end
     else
       status 404

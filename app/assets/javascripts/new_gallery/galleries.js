@@ -27,9 +27,8 @@ o.get = function(id){
 };
 
 o.getImages = function(id){
-  return $http.get('/galleries/' + id + '/images.json')
-    .then(function(response){
-      return response.data
+  return $http.get('/galleries/' + id + '/images.json').success(function(data){
+    angular.copy(data, o.images);
   });
 };
 
