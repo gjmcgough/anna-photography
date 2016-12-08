@@ -9,4 +9,8 @@ class Image < ActiveRecord::Base
 
 	# Validate the attached image is image/jpg, image/png, etc
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+
+  def img_url
+    image.url(:med)
+  end
 end
