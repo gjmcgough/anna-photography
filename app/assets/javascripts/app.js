@@ -1,4 +1,4 @@
-var app = angular.module('annaPhotography', ['ui.router', 'templates', 'Devise', 'ngFileUpload']);
+  var app = angular.module('annaPhotography', ['ui.router', 'templates', 'Devise', 'ngFileUpload']);
 
 app.config([
   '$stateProvider',
