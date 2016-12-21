@@ -18,7 +18,7 @@ class ImagesController < ApplicationController
     # images = gallery.images
     if image.save
       @images = Image.where(gallery_id: params[:gallery_id])
-      puts "{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{#{@images.to_a}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
+      puts "{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{#{s3_bucket.objects.to_a}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
       respond_to do |format|
          format.json { render :json => @images.to_a }
       end

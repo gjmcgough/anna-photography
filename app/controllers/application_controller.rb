@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   after_filter :set_csrf_cookie_for_ng
   respond_to :json
+  helper :all
+  include ApplicationHelper
 
   def angular
    render 'layouts/application'
