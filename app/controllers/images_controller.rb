@@ -16,9 +16,11 @@ class ImagesController < ApplicationController
     # puts "{{{{{{}}}}}}{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{#{gallery.title}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
     image = Image.new(image_params)
     # images = gallery.images
-    image.src = "https:" + image.image.url
+
     if image.save
+      image.update(src: 'https:' + image.image.url)
       @images = Image.where(gallery_id: params[:gallery_id])
+
       puts "{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{#{s3_bucket.object(image.image_file_name).presigned_url(:get)}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
       # signer = Aws::S3::Presigner.new
       # url = signer.presigned_url(:get_object, bucket: 'anna-lizano-photo', key: image.image_file_name)
