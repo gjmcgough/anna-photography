@@ -16,7 +16,12 @@ app.config([
       .state('teleport', {
         url: '/teleport',
         templateUrl: 'teleport/_teleport.html',
-        controller: 'TeleportCtrl'
+        controller: 'TeleportCtrl',
+        resolve: {
+          postPromise: ['galleries', function(galleries){
+            return galleries.getCoverImages();
+          }]
+        }
       });
 
     $stateProvider

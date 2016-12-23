@@ -5,7 +5,8 @@ app.factory('galleries', [
   function($http){
   var o = {
     galleries: [],
-    images: []
+    images: [],
+    cover_images: []
  };
 
  o.getGalleries = function() {
@@ -32,5 +33,12 @@ o.getImages = function(id){
   });
 };
 
- return o;
-}])
+o.getCoverImages = function(){
+  return $http.get('/cover_images.json').success(function(data){
+    angular.copy(data, o.cover_images);
+  });
+};
+
+return o;
+
+}]);

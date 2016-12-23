@@ -3,7 +3,15 @@ class ImagesController < ApplicationController
   def index
     @images = Image.where(gallery_id: params[:gallery_id])
     respond_to do |format|
-       format.json { render :json => @images.to_a }
+      format.json { render :json => @images.to_a }
+    end
+  end
+
+  def cover_images
+    @images = Image.where(cover_image: true)
+    puts "{{{{{{{{{{{{{{{{{#{@images.to_a}}}}}}}}}}}}}}}}}}"
+    respond_to do |format|
+      format.json { render :json => @images.to_a }
     end
   end
 
