@@ -9,7 +9,12 @@ app.config([
       .state('index', {
         url: '/index',
         templateUrl: 'index/_index.html',
-        controller: 'MainCtrl'
+        controller: 'TeleportCtrl',
+        resolve: {
+          postPromise: ['galleries', function(galleries){
+            return galleries.getCoverImages();
+          }]
+        }
       });
 
     $stateProvider

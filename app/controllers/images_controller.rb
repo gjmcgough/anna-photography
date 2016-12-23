@@ -23,10 +23,11 @@ class ImagesController < ApplicationController
     # gallery = Gallery.find(params[:gallery_id])
     # puts "{{{{{{}}}}}}{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{#{gallery.title}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
     image = Image.new(image_params)
+    gallery = Gallery.find(params[:gallery_id])
     # images = gallery.images
 
     if image.save
-      image.update(src: 'https:' + image.image.url)
+      image.update(src: 'https:' + image.image.url, gallery_title: gallery.title)
       @images = Image.where(gallery_id: params[:gallery_id])
 
       puts "{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{#{s3_bucket.object(image.image_file_name).presigned_url(:get)}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
