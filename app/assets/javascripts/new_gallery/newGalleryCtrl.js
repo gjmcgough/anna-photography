@@ -15,8 +15,8 @@ app.controller('NewGalleryCtrl', [
       $scope.title = '';
     };
 
-    $scope.data = {
-      model: null,
-      availableOptions: $scope.galleries
-    };
+    // $scope.data = {
+    //   model: null,
+    //   availableOptions: $scope.galleries
+    // };
 }]);

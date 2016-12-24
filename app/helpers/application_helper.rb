@@ -12,4 +12,10 @@ module ApplicationHelper
     # save and return array containing all galleries
   end
 
+  def s3_bucket
+    s3 = Aws::S3::Client.new
+    resource = Aws::S3::Resource.new(client: s3)
+    bucket = resource.bucket('anna-lizano-photo')
+    return bucket
+  end
 end

@@ -9,11 +9,12 @@ app.controller('UploadImageCtrl', [
   function($scope, galleries, gallery, Upload, $stateParams){
     $scope.gallery = gallery;
     $scope.images = galleries.images;
-    $scope.src = 'https://s3-us-west-1.amazonaws.com/anna-lizano-photo/images/images/000/000/039/original/Screen_Shot_2016-11-15_at_4.03.31_PM.png';
+    // $scope.image = $scope.images[0]
+    // $scope.src = 'https://s3.amazonaws.com/anna-lizano-photo/images/images/000/000/009/med/alpacayawn.jpg';
     $scope.coverBool = false
-    console.log($scope.src);
-    console.log($scope.images[0].image_file_name);
-    console.log($stateParams.image_file_name);
+    // console.log("https:" + $scope.image.src)
+    // console.log($scope.images[0].image_file_name);
+    // console.log($scope.images[0]);
 
     $scope.upload = function(file){
       Upload.upload({

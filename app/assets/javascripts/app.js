@@ -1,4 +1,4 @@
-var app = angular.module('annaPhotography', ['ui.router', 'templates', 'Devise', 'ngFileUpload']);
+  var app = angular.module('annaPhotography', ['ui.router', 'templates', 'Devise', 'ngFileUpload']);
 
 app.config([
   '$stateProvider',
@@ -9,14 +9,24 @@ app.config([
       .state('index', {
         url: '/index',
         templateUrl: 'index/_index.html',
-        controller: 'MainCtrl'
+        controller: 'TeleportCtrl',
+        resolve: {
+          postPromise: ['galleries', function(galleries){
+            return galleries.getCoverImages();
+          }]
+        }
       });
 
     $stateProvider
       .state('teleport', {
         url: '/teleport',
         templateUrl: 'teleport/_teleport.html',
-        controller: 'TeleportCtrl'
+        controller: 'TeleportCtrl',
+        resolve: {
+          postPromise: ['galleries', function(galleries){
+            return galleries.getCoverImages();
+          }]
+        }
       });
 
     $stateProvider
