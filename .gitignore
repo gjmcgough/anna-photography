@@ -15,3 +15,6 @@
 # Ignore files which contain AWS keys
 .env
 /config/application.yml
+
+# allow heroku precompile
+public/assets/**
