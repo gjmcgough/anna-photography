@@ -1,4 +1,4 @@
-  var app = angular.module('annaPhotography', ['ui.router', 'templates', 'Devise', 'ngFileUpload', 'ui.bootstrap']);
+  var app = angular.module('annaPhotography', ['ui.router', 'templates', 'Devise', 'ngFileUpload', 'bootstrapLightbox']);
 
 app.config([
   '$stateProvider',
