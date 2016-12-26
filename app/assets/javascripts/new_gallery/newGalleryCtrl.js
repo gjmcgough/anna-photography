@@ -5,7 +5,8 @@ app.controller('NewGalleryCtrl', [
   'galleries',
   function($scope, galleries){
     $scope.galleries = galleries.galleries;
-    console.log($scope.galleries);
+    $scope.images = galleries.images;
+    console.log($scope.images);
 
     $scope.makeGallery = function(){
       if(!$scope.title || $scope.title === '') {return;}

@@ -40,7 +40,12 @@ app.config([
       .state('location_gallery', {
         url: '/location_gallery/{id}',
         templateUrl: 'location_gallery/_location_gallery.html',
-        controller: 'LocationGalleryCtrl'
+        controller: 'NewGalleryCtrl',
+        resolve: {
+          postPromise: ['$stateParams', 'galleries', function($stateParams, galleries){
+            return galleries.getImages($stateParams.id);
+          }]
+        }
       });
 
     $stateProvider
@@ -74,7 +79,7 @@ app.config([
         controller: 'UploadImageCtrl',
         resolve: {
           gallery: ['$stateParams', 'galleries', function($stateParams, galleries){
-            return galleries.get($stateParams.id);
+            return galleries.getGallery($stateParams.id);
           }],
           postPromise: ['$stateParams', 'galleries', function($stateParams, galleries){
             return galleries.getImages($stateParams.id);
