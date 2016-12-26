@@ -5,5 +5,6 @@ app.controller('GalleryImageCtrl', [
   'galleries',
   function($scope, galleries){
     $scope.images = galleries.images;
+    $scope.myInterval = 3000;
 
 }]);

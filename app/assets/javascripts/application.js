@@ -4,4 +4,5 @@
 //= require angular-ui-router
 //= require ng-file-upload-shim
 //= require ng-file-upload
+//= require angular-ui-bootstrap
 //= require_tree .

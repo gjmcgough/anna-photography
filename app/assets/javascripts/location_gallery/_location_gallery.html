@@ -5,3 +5,12 @@
     </div>
   </div>
 </div>
+
+  <carousel interval="myInterval">
+     <slide ng-repeat="image in images" active="image.active">
+       <img ng-src="{{image.src}}">
+       <div class="carousel-caption">
+         <h4>Slide {{$index+1}}</h4>
+       </div>
+     </slide>
+   </carousel>
