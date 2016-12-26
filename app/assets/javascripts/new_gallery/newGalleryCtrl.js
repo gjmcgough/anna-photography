@@ -5,6 +5,7 @@ app.controller('NewGalleryCtrl', [
   'galleries',
   function($scope, galleries){
     $scope.galleries = galleries.galleries;
+    $scope.images = galleries.images;
     console.log($scope.galleries);
 
     $scope.makeGallery = function(){
