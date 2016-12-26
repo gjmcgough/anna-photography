@@ -1,4 +1,4 @@
-
+<div ng-controller="NavCtrl">
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -13,6 +13,8 @@
       <div class="navbar-collapse collapse" id="myNavbar">
       <!-- <div class="collapse navbar-collapse" id="myNavbar"> -->
         <ul class="nav navbar-nav navbar-right">
+          <li ng-show="signedIn()"><a href="#/new">New</a></li>
+          <!-- <li ng-show="signedIn()"><a ng-click="logout()"></a></li> -->
           <li><a href="#">Home</a></li>
           <li><a href="#/teleport">Teleport</a></li>
           <li><a href="#/about">About</a></li>
@@ -23,3 +25,4 @@
       </div>
     </div>
   </nav>
+</div>

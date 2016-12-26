@@ -99,6 +99,13 @@ app.config([
           }]
         });
 
+      $stateProvider
+        .state('nav', {
+          url: '/nav',
+          templateUrl: 'about/_about.html',
+          controller: 'BioCtrl'
+        });
+
   $urlRouterProvider.otherwise('index');
 
 }]);
