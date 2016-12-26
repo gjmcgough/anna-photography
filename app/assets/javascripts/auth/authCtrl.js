@@ -10,4 +10,7 @@ app.controller('AuthCtrl', [
         $state.go('new');
       });
     };
+
+    $scope.signedIn = Auth.isAuthenticated;
+    $scope.logout = Auth.logout;
 }]);
