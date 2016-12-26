@@ -1,4 +1,6 @@
 class GalleriesController < ApplicationController
+  before_filter :authenticate_user!, only: [:create]
+
   def index
     galleries = Gallery.all
     respond_with galleries
