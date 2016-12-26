@@ -21,7 +21,7 @@ app.factory('galleries', [
   });
 };
 
-o.get = function(id){
+o.getGallery = function(id){
   return $http.get('/galleries/' + id + '.json').then(function(res){
     return res.data;
   });

@@ -14,7 +14,7 @@ app.controller('UploadImageCtrl', [
     $scope.coverBool = false
     // console.log("https:" + $scope.image.src)
     // console.log($scope.images[0].image_file_name);
-    // console.log($scope.images[0]);
+    console.log($scope.images);
 
     $scope.upload = function(file){
       Upload.upload({
