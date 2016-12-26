@@ -87,6 +87,13 @@ app.config([
         }
       });
 
+      $stateProvider
+        .state('login', {
+          url: '/login',
+          templateUrl: 'auth/_login.html',
+          controller: 'AuthCtrl'
+        });
+
   $urlRouterProvider.otherwise('index');
 
 }]);
