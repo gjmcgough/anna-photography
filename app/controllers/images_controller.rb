@@ -1,4 +1,5 @@
 class ImagesController < ApplicationController
+  before_filter :authenticate_user!, only: [:create, :update]
 
   def index
     @images = Image.where(gallery_id: params[:gallery_id])
