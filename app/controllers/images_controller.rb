@@ -28,13 +28,20 @@ class ImagesController < ApplicationController
     # images = gallery.images
 
     if image.save
-      image.update(url: 'https:' + image.image.url, thumb: 'https:' + image.image.url(:thumb), cover: 'https:' + image.image.url(:cover), gallery_title: gallery.title, jumbo: 'https:' + image.image.url(:jumbo))
+      puts "{{{{{{{{{{{{{{{{{{{{{{{{{{{#{image.image.url}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
+      image.update(
+      url: 'https:' + image.image.url,
+      thumb: 'https:' + image.image.url(:thumb),
+      cover: 'https:' + image.image.url(:cover),
+      jumbo: 'https:' + image.image.url(:jumbo),
+      gallery_title: gallery.title
+      )
       @images = Image.where(gallery_id: params[:gallery_id])
 
-      puts "{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{#{image.url}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
+      # puts "{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{#{image.url}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
       # signer = Aws::S3::Presigner.new
       # url = signer.presigned_url(:get_object, bucket: 'anna-lizano-photo', key: image.image_file_name)
-      puts "{{{{{{{{{{{{{{{{{{{{{#{image.src}}}}}}}}}}}}}}}}}}}}}}"
+      # puts "{{{{{{{{{{{{{{{{{{{{{#{image.src}}}}}}}}}}}}}}}}}}}}}}"
       respond_to do |format|
          format.json { render :json => @images.to_a }
       end

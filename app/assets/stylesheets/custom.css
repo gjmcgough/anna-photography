@@ -1,5 +1,8 @@
 .gallery {
   padding: 0;
+  margin: 10px;
+  float: left;
+  position: relative;
 }
 
 .gallery li {
@@ -28,11 +31,9 @@
   width: 120px;
 }
 
-
-
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
-  margin-bottom: -20px;
+  margin-bottom: 10px;
   border-radius: 0;
 }
 
