@@ -31,6 +31,8 @@ gem 'aws-sdk'	# amazon web services gem
 gem 'angular-file-upload-rails', '~> 1.6.1.1'
 gem 'devise', '~> 3.4.0'
 gem 'paperclip'
+gem 'angular-ui-bootstrap-rails'
+gem 'angularjs-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

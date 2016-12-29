@@ -12,5 +12,6 @@
  *
  *= require_self
  *= require bootstrap/dist/css/bootstrap
+ *= require angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css
  *= require_tree .
  */

@@ -1,3 +1,35 @@
+.gallery {
+  padding: 0;
+}
+
+.gallery li {
+  display: inline-block;
+  margin: 0 1em 1em 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .gallery li {
+    margin: 0;
+  }
+}
+
+.gallery1 img {
+  width: 300px;
+  height: 300px;
+}
+
+.gallery2 img {
+  width: 6em;
+}
+
+.gallery5 img {
+  width: 120px;
+}
+
+
+
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
   margin-bottom: -20px;

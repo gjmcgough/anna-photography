@@ -1,4 +1,4 @@
-  var app = angular.module('annaPhotography', ['ui.router', 'templates', 'Devise', 'ngFileUpload']);
+  var app = angular.module('annaPhotography', ['ui.router', 'templates', 'Devise', 'ngFileUpload', 'bootstrapLightbox']);
 
 app.config([
   '$stateProvider',
@@ -40,7 +40,7 @@ app.config([
       .state('location_gallery', {
         url: '/location_gallery/{id}',
         templateUrl: 'location_gallery/_location_gallery.html',
-        controller: 'NewGalleryCtrl',
+        controller: 'GalleryImageCtrl',
         resolve: {
           postPromise: ['$stateParams', 'galleries', function($stateParams, galleries){
             return galleries.getImages($stateParams.id);
@@ -87,24 +87,17 @@ app.config([
         }
       });
 
-      $stateProvider
-        .state('login', {
-          url: '/login',
-          templateUrl: 'auth/_login.html',
-          controller: 'AuthCtrl',
-          onEnter: ['$state', 'Auth', function($state, Auth) {
-            Auth.currentUser().then(function (){
-              $state.go('new');
-            })
-          }]
-        });
-
-      $stateProvider
-        .state('nav', {
-          url: '/nav',
-          templateUrl: 'about/_about.html',
-          controller: 'BioCtrl'
-        });
+    $stateProvider
+      .state('login', {
+        url: '/login',
+        templateUrl: 'auth/_login.html',
+        controller: 'AuthCtrl',
+        onEnter: ['$state', 'Auth', function($state, Auth) {
+          Auth.currentUser().then(function (){
+            $state.go('new');
+          })
+        }]
+      });
 
   $urlRouterProvider.otherwise('index');
 
