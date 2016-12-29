@@ -13,7 +13,7 @@
 <div id="upload-gallery" class="container-fluid bg-3 text-center">
   <div class="row">
     <div class="gallery-images" ng-repeat="image in images" ng-mouseover="style={'height':'310px','width':'310px'}" ng-mouseleave="style={'height':'300px','width':'300px'}">
-        <img class ="gallery-images" ng-style="style" ng-src="{{ image.src }}" ng-hide="changeImage" alt="super awesome picture" />
+        <img class ="gallery-images" ng-style="style" ng-src="{{ image.url }}" ng-hide="changeImage" alt="super awesome picture" />
     </div>
   </div>
 </div>
