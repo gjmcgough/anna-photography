@@ -38,10 +38,10 @@ class ImagesController < ApplicationController
       )
       @images = Image.where(gallery_id: params[:gallery_id])
 
-      puts "{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{#{image.url}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
+      # puts "{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{#{image.url}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
       # signer = Aws::S3::Presigner.new
       # url = signer.presigned_url(:get_object, bucket: 'anna-lizano-photo', key: image.image_file_name)
-      puts "{{{{{{{{{{{{{{{{{{{{{#{image.src}}}}}}}}}}}}}}}}}}}}}}"
+      # puts "{{{{{{{{{{{{{{{{{{{{{#{image.src}}}}}}}}}}}}}}}}}}}}}}"
       respond_to do |format|
          format.json { render :json => @images.to_a }
       end
