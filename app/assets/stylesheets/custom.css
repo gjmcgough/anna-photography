@@ -234,7 +234,7 @@ footer {
       /*.navbar-collapse, .collapse {
           display: none!important;
       }*/
-      .teleport-images, .gallery-images {
+      /*.teleport-images, .gallery-images {
         height: 25vh;
         max-width: 104.25%;
         margin: 0px;
@@ -244,24 +244,8 @@ footer {
         margin-bottom: 10px;
         float: left;
         position: relative;
-      }
-      .teleport-titles {
-        margin: 7px;
-        margin-left: 40px;
-        margin-top: 30px;
-        position: absolute;
-        top: 0px;
-        /*left: 0;*/
-        width: 50%;
-        color: white;
-        font-family: 'Poiret One', cursive;
-        letter-spacing: -1px;
-        background: rgb(0, 0, 0); /* fallback color */
-        background: rgba(0, 0, 0, 0.7);
-        padding: 10px;
-        z-index: 1;
-        /*border: solid green 10px;*/
-      }
+      }*/
+  
       #feature-image {
         height: 100%;
         min-width: 100vw;
