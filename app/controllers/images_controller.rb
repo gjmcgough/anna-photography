@@ -10,7 +10,6 @@ class ImagesController < ApplicationController
 
   def cover_images
     @images = Image.where(cover_image: true)
-    puts "{{{{{{{{{{{{{{{{{#{@images.to_a}}}}}}}}}}}}}}}}}}"
     respond_to do |format|
       format.json { render :json => @images.to_a }
     end
@@ -21,14 +20,9 @@ class ImagesController < ApplicationController
   end
 
   def create
-    # gallery = Gallery.find(params[:gallery_id])
-    # puts "{{{{{{}}}}}}{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{#{gallery.title}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
     image = Image.new(image_params)
     gallery = Gallery.find(params[:gallery_id])
-    # images = gallery.images
-
     if image.save
-      puts "{{{{{{{{{{{{{{{{{{{{{{{{{{{#{image.image.url}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
       image.update(
       url: 'https:' + image.image.url,
       thumb: 'https:' + image.image.url(:thumb),
@@ -37,11 +31,6 @@ class ImagesController < ApplicationController
       gallery_title: gallery.title
       )
       @images = Image.where(gallery_id: params[:gallery_id])
-
-      # puts "{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{#{image.url}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}"
-      # signer = Aws::S3::Presigner.new
-      # url = signer.presigned_url(:get_object, bucket: 'anna-lizano-photo', key: image.image_file_name)
-      # puts "{{{{{{{{{{{{{{{{{{{{{#{image.src}}}}}}}}}}}}}}}}}}}}}}"
       respond_to do |format|
          format.json { render :json => @images.to_a }
       end

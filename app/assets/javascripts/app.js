@@ -32,8 +32,7 @@ app.config([
     $stateProvider
       .state('about', {
         url: '/about',
-        templateUrl: 'about/_about.html',
-        controller: 'BioCtrl'
+        templateUrl: 'about/_about.html'
       });
 
     $stateProvider
