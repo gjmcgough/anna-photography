@@ -9,9 +9,9 @@
  <div class="container-fluid bg-3 text-center">
   <div class="row">
     <ul class="gallery gallery1">
-      <li ng-repeat="image in images">
+      <li ng-repeat="image in images" ng-mouseover="style={'height':'310px','width':'310px'}" ng-mouseleave="style={'height':'300px','width':'300px'}">
         <a ng-click="openLightboxModal($index)">
-          <img ng-src="{{image.thumb}}" class="img-thumbnail">
+          <img ng-src="{{image.thumb}}" class="img-thumbnail" ng-style="style" ng-hide="changeImage">
         </a>
       </li>
     </ul>
