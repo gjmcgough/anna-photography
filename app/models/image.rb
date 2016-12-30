@@ -2,9 +2,9 @@ class Image < ActiveRecord::Base
   belongs_to :galleries
 
   has_attached_file :image, styles: {
-		thumb: "300x300>",
-		cover: "400x400>",
-    jumbo: "1000x1000<"
+		thumb: "W=300>",
+		cover: "W=400>",
+    jumbo: "W=1024<"
 	}
 
 	# Validate the attached image is image/jpg, image/png, etc
