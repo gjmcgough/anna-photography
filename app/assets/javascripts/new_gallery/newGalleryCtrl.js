@@ -6,7 +6,6 @@ app.controller('NewGalleryCtrl', [
   function($scope, galleries){
     $scope.galleries = galleries.galleries;
     $scope.images = galleries.images;
-    console.log($scope.images);
 
     $scope.makeGallery = function(){
       if(!$scope.title || $scope.title === '') {return;}
@@ -16,8 +15,4 @@ app.controller('NewGalleryCtrl', [
       $scope.title = '';
     };
 
-    // $scope.data = {
-    //   model: null,
-    //   availableOptions: $scope.galleries
-    // };
 }]);

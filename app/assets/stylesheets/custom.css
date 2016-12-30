@@ -50,7 +50,6 @@
 }
 
 .row {
-  /*padding-top: 0px;*/
   display: inline-block;
   margin-left: -25px;
 }
@@ -93,7 +92,6 @@ footer {
 
 #about-me {
   background-color: white;
-  /*margin-bottom: 2%;*/
 }
 
 .navbar-brand {
@@ -115,11 +113,8 @@ footer {
 }
 
 .img-responsive {
-  /*overflow: hidden;*/
-  /*object-fit: cover;*/
   width: 100%;
   height: 100%;
-
 }
 
 .photo-title {
@@ -156,7 +151,6 @@ footer {
       width: 100vw;
       margin: 0 auto;
       margin-left: -15px;
-      /*border: 10px solid green;*/
     }
   }
 
@@ -231,20 +225,6 @@ footer {
           border-top: 1px solid transparent;
           box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
       }
-      /*.navbar-collapse, .collapse {
-          display: none!important;
-      }*/
-      /*.teleport-images, .gallery-images {
-        height: 25vh;
-        max-width: 104.25%;
-        margin: 0px;
-        margin-top: 5px;
-        margin-left: -2.1%;
-        width: 104.25%;
-        margin-bottom: 10px;
-        float: left;
-        position: relative;
-      }*/
 
       #feature-image {
         height: 100%;
