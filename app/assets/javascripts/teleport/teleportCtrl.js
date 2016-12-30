@@ -7,7 +7,7 @@ app.controller('TeleportCtrl', [
     $scope.galleries = galleries.galleries;
     $scope.cover_images = galleries.cover_images;
     console.log($scope.galleries);
-    $scope.home_image = galleries.cover_images[0];
+    $scope.home_image = galleries.cover_images[2];
 
     // var dataArray = [];
     // var valueArray = [];
