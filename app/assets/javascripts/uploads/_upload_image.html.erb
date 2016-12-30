@@ -1,13 +1,13 @@
 <h2>Add an Image</h2>
 <form ng-submit="upload(file)">
   <div class="btn-group">
-    Make this image the gallery's cover letter?
+    Make this image the gallery's cover image?
     <input type='radio' name='cover-bool' ng-model='coverBool' value='true' />YES
     <input type='radio' name='cover-bool' ng-model='coverBool' value='false' /> NO
   </div><br><br>
   Select Image to Upload:
-  <input type="file" ngf-select ng-model="file" name="image">
-  <button type="submit">Upload Image(s)</button>
+    <input type="file" ngf-select ng-model="files" name="image">
+  <button type="submit" class="btn btn-inverse btn-lrg">Upload Image</button>
 </form><br><br>
 
 <div id="upload-gallery" class="container-fluid bg-3 text-center">
