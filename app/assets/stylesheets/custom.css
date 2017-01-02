@@ -78,8 +78,7 @@ footer {
 }
 
 #feature-image {
-  height: 100vh;
-  width: 101.4vw;
+
   margin-left: calc(-56vw + 50%);
   margin-right: -114px;
 }
@@ -139,6 +138,12 @@ footer {
   padding: 10px;
   z-index: 1;
 }
+
+  @media (max-width: 1600px) {
+    * {
+      max-width: 1300px;
+    }
+  }
 
   @media (max-width: 1257px) {
     * {
