@@ -6,6 +6,16 @@
   border: 2px solid red;
 }
 
+.modal-content {
+  background-color: #222;
+}
+
+.btn-default{
+  color: #9d9d9d;
+  background-color: #222;
+  border-color: #ccc;
+}
+
 body {
   background-color: #222;
   font-family: 'Poiret One', cursive;
