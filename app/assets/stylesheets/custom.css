@@ -1,3 +1,11 @@
+.blue {
+    border: 2px solid blue;
+}
+
+.red {
+  border: 2px solid red;
+}
+
 body {
   background-color: #222;
   font-family: 'Poiret One', cursive;
