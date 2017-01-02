@@ -1,9 +1,19 @@
 .blue {
+    margin-top: 85px;
     border: 2px solid blue;
 }
 
 .red {
+  margin-top: 55px;
   border: 2px solid red;
+}
+
+#about {
+  margin-top: -40px;
+}
+
+#location_gallery {
+  margin-top: -23px;
 }
 
 .modal-content {
