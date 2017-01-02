@@ -1,5 +1,16 @@
+html {
+  background-color: white;
+}
+
+body {
+  background-color: #222;
+  font-family: 'Poiret One', cursive;
+  color: #9d9d9d;
+}
+
 .img-thumbnail {
   border: none;
+  background-color: #222;
 }
 
 .gallery {
@@ -37,8 +48,8 @@
 
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
-  margin-bottom: 10px;
-  border-radius: 0;
+  margin-bottom: 0px;
+  border: none;
 }
 
 .navbar-nav {
@@ -52,6 +63,7 @@
 .row {
   display: inline-block;
   margin-left: -25px;
+  margin-top: -15px;
 }
 
 /* Add a gray background color and some padding to the footer */
@@ -60,9 +72,9 @@ footer {
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: #101010;
-  padding-top: 16px;
-  margin-top: 15px;
+  background-color: #222;
+  padding-top: 9px;
+  margin-top: 5px;
 }
 
 .jumbotron {
