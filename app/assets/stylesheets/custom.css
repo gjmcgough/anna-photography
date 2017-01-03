@@ -8,6 +8,10 @@
   /*border: 2px solid red;*/
 }
 
+#location-gallery-header {
+  text-align: center;
+}
+
 #about {
   margin-top: -40px;
 }
