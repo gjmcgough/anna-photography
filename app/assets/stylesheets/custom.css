@@ -18,6 +18,11 @@
   color: inherit;
 }
 
+.make-gal-btn {
+  border: solid 1px #9d9d9d;
+  background-color: #000000;
+}
+
 .btn-align {
   margin-left: 100px;
 }
