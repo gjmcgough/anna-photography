@@ -14,6 +14,10 @@
   /*background-color: #222;*/
 }
 
+.file-upld{
+  align: center;
+}
+
 .gal-btn:hover {
   color: inherit;
 }
@@ -21,6 +25,14 @@
 .make-gal-btn {
   border: solid 1px #9d9d9d;
   background-color: #000000;
+}
+
+.upload-btn {
+  cursor: pointer;
+}
+
+.gallery-images, .img-thumbnail {
+  cursor: pointer;
 }
 
 .btn-align {
