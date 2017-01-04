@@ -8,6 +8,36 @@
   /*border: 2px solid red;*/
 }
 
+.gal-btn {
+  color: #222;
+  padding: 100px;
+  /*background-color: #222;*/
+}
+
+.gal-btn:hover {
+  color: inherit;
+}
+
+.btn-align {
+  margin-left: 100px;
+}
+
+.title-btn {
+  color: #222;
+  padding: 20px;
+  float: left;
+  positon: relative;
+  text-align: center;
+}
+
+.title-btn:hover {
+  color: inherit;
+}
+
+#new-gallery {
+  text-align: center;
+}
+
 #location-gallery-header {
   text-align: center;
 }
