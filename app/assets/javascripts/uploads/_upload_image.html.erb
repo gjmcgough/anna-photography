@@ -1,7 +1,4 @@
-<div id="new-gallery">
-
-
-
+<div id="upload-container">
 <h2>Add an Image</h2>
 <form ng-submit="upload(file)">
   <div class="btn-group">
@@ -25,6 +22,7 @@
   <div class="row">
     <div class="gallery-images" ng-repeat="image in images" ng-mouseover="style={'height':'310px','width':'310px'}" ng-mouseleave="style={'height':'300px','width':'300px'}">
         <img class ="gallery-images" ng-style="style" ng-src="{{ image.url }}" ng-hide="changeImage" alt="super awesome picture"/>
+        <a ng-click="deleteGallery($index)" class="delete-btn"><button class="btn btn-danger">Delete Gallery</button></a>
     </div>
   </div>
 </div>
