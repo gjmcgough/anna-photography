@@ -39,11 +39,17 @@ o.getCoverImages = function(){
   });
 };
 
-o.delete = function(id) {
+o.deleteGal = function(id) {
   return $http.delete('/galleries/' + id + '.json').success(function(data){
     o.galleries.push(data);
-  })
-}
+  });
+};
+
+o.deleteImg = function(id, gallery_id) {
+  return $http.delete('/galleries/' + gallery_id + 'images' + id + '.json').success(function(data){
+    o.images.push(data);
+  });
+};
 
 return o;
 

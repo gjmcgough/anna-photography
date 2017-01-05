@@ -56,7 +56,11 @@
   color: inherit;
 }
 
-#new-gallery {
+.gal-img-container {
+  /*margin-bottom: 40px;*/
+}
+
+#new-gallery, #upload-container {
   text-align: center;
 }
 

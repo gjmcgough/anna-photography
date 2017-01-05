@@ -15,26 +15,13 @@ app.controller('NewGalleryCtrl', [
       $scope.title = '';
     };
 
-    $scope.remove = function(ary, index) {
-      ary.splice(index, 1);
-    };
-
     $scope.deleteGallery = function(index){
-      var galleryToDelete = $scope.galleries[index];
+      var objectToDelete = $scope.galleries[index];
 
       if(confirm("Are you sure you want to delete this gallery?")){
-        // console.log($scope.galleries[galleryToDelete.id]);
-        // var elemntToRemove = $(this).parent();
-        // console.log(elemntToRemove);
-
-        galleries.delete(galleryToDelete.id)
+        galleries.deleteGal(objectToDelete.id)
           .success(function(data){
-            // $(elemntToRemove).remove();
-            // console.log($($scope.galleries[index]).html());
-            console.log(data);
             $scope.galleries = data;
-            // $scope.$apply();
-
         });
       };
     };

@@ -16,6 +16,8 @@ class GalleriesController < ApplicationController
 
   def destroy
     gallery = Gallery.find(params[:id])
+    images = gallery.images.to_a
+    images.each(&:destroy)
     gallery.destroy
     galleries = Gallery.all
     respond_to do |format|
