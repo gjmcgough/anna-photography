@@ -15,7 +15,8 @@
 }
 
 .file-upld{
-  align: center;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .gal-btn:hover {
@@ -29,6 +30,10 @@
 
 .upload-btn {
   cursor: pointer;
+  background-color: gold;
+  color: #000000;
+  width: 50%;
+  font-size: 150%;
 }
 
 .gallery-images, .img-thumbnail {

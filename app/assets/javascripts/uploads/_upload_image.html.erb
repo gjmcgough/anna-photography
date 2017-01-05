@@ -1,27 +1,23 @@
+<div id="new-gallery">
+
+
 <h2>Add an Image</h2>
 <form ng-submit="upload(file)">
   <div class="btn-group">
-    Make this image the gallery's cover image?
+    <h4>Make this image the gallery's cover image?</h4>
     <input type='radio' name='cover-bool' ng-model='coverBool' value='true' />YES
     <input type='radio' name='cover-bool' ng-model='coverBool' value='false' /> NO
   </div><br><br>
   Select Image to Upload:
-
-
-      <div class="input-group">
-          <label class="input-group-btn">
-              <span class="btn btn-primary">
-                  Browse&hellip; <input type="file" ngf-select ng-model="file" style="display: none;" name="image">
-              </span>
-          </label>
-          <input type="text" class="form-control" value="{{file.name}}">
-      </div>
-
-
-    <button type="submit" class="btn btn-inverse btn-lrg upload-btn">Upload Image(s)</button>
-
-    <!-- <input type="file" ngf-select ng-model="file" name="image">
-  <button type="submit" class="btn btn-inverse btn-lrg">Upload Image(s)</button> -->
+    <div class="input-group file-upld">
+        <label class="input-group-btn">
+            <span class="btn btn-default">
+                Browse&hellip; <input type="file" ngf-select ng-model="file" style="display: none;" name="image">
+            </span>
+        </label>
+        <input type="text" class="form-control" value="{{file.name}}">
+    </div>
+  <button type="submit" class="btn btn-inverse btn-lrg upload-btn">Upload Image</button>
 </form><br><br>
 
 <div id="upload-gallery" class="container-fluid bg-3 text-center">
@@ -30,4 +26,5 @@
         <img class ="gallery-images" ng-style="style" ng-src="{{ image.url }}" ng-hide="changeImage" alt="super awesome picture" />
     </div>
   </div>
+</div>
 </div>
