@@ -46,7 +46,7 @@ o.deleteGal = function(id) {
 };
 
 o.deleteImg = function(id, gallery_id) {
-  return $http.delete('/galleries/' + gallery_id + 'images' + id + '.json').success(function(data){
+  return $http.delete('/galleries/' + gallery_id + '/images/' + id + '.json').success(function(data){
     o.images.push(data);
   });
 };

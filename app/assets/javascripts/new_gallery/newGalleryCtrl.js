@@ -17,7 +17,7 @@ app.controller('NewGalleryCtrl', [
 
     $scope.deleteGallery = function(index){
       var objectToDelete = $scope.galleries[index];
-
+      console.log(galleries);
       if(confirm("Are you sure you want to delete this gallery?")){
         galleries.deleteGal(objectToDelete.id)
           .success(function(data){

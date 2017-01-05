@@ -10,6 +10,7 @@ app.controller('UploadImageCtrl', [
     $scope.gallery = gallery;
     $scope.images = galleries.images;
     $scope.coverBool = false;
+    $scope.galleries = galleries.galleries;
 
     $scope.upload = function(file){
       Upload.upload({
@@ -28,9 +29,9 @@ app.controller('UploadImageCtrl', [
 
     $scope.removeImage = function(index){
       var objectToDelete = $scope.images[index];
-
+      console.log(galleries.images);
       if(confirm("Are you sure you want to delete this photo?")){
-        $scope.images.deleteImg(objectToDelete.id, gallery.id)
+        galleries.deleteImg(objectToDelete.id, gallery.id)
           .success(function(data){
             $scope.images = data;
         });
