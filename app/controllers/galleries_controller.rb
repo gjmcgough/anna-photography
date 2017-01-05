@@ -18,7 +18,9 @@ class GalleriesController < ApplicationController
     gallery = Gallery.find(params[:id])
     gallery.destroy
     galleries = Gallery.all
-    respond_with galleries
+    respond_to do |format|
+      format.json { render :json => galleries.to_a }
+    end
   end
 
   private
