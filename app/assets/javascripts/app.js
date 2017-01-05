@@ -101,12 +101,10 @@ app.config([
   $urlRouterProvider.otherwise('index');
 
 }]);
-// 
+
 // $(document).ready(function(){
 //   $('body').on("click", ".delete-btn", function(){
 //       if(confirm('Are you sure you want to delete this gallery?')) {
-//         console.log($(this).parent().parent());
-//         // var galleryId = $(this).parent().index();
 //
 //         // $.ajax({
 //         //   url: '/galleries/' + galleryId + '.json',

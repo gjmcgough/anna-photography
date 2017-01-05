@@ -19,8 +19,9 @@ app.controller('NewGalleryCtrl', [
 
     $scope.deleteGallery = function(index){
       var gallery_to_delete = $scope.galleries[index];
-      console.log(gallery_to_delete.id);
-      galleries.delete(gallery_to_delete.id);
+      if(confirm("Are you sure you want to delete this gallery?")){
+          galleries.delete(gallery_to_delete.id)
+      }
     };
 
 }]);
