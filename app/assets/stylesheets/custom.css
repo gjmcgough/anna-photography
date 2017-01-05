@@ -10,7 +10,7 @@
 
 .gal-btn {
   color: #222;
-  padding: 100px;
+  /*padding: 100px;*/
   /*background-color: gold;*/
 }
 
@@ -32,7 +32,7 @@
   cursor: pointer;
   background-color: gold;
   color: #000000;
-  width: 50%;
+  width: 75%;
   font-size: 150%;
 }
 
