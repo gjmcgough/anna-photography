@@ -39,6 +39,12 @@ o.getCoverImages = function(){
   });
 };
 
+o.delete = function(id) {
+  return $http.delete('/galleries/' + id + '.json').success(function(data){
+    o.galleries.push(data);
+  })
+}
+
 return o;
 
 }]);
