@@ -56,8 +56,8 @@
   color: inherit;
 }
 
-#upload-container {
-  margin-bottom: 50px;
+.gal-img-container {
+  /*margin-bottom: 40px;*/
 }
 
 #new-gallery, #upload-container {

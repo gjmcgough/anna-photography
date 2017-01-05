@@ -22,15 +22,15 @@ app.controller('UploadImageCtrl', [
         },
         file: file,
       }).success(function(data){
-        $scope.image = data;
+        $scope.images = data;
       });
     };
 
-    $scope.delete = function(index){
+    $scope.removeImage = function(index){
       var objectToDelete = $scope.images[index];
 
-      if(confirm("Are you sure you want to delete this gallery?")){
-        galleries.delete(objectToDelete.id)
+      if(confirm("Are you sure you want to delete this photo?")){
+        $scope.images.deleteImg(objectToDelete.id, gallery.id)
           .success(function(data){
             $scope.images = data;
         });

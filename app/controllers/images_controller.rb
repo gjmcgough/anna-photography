@@ -48,6 +48,16 @@ class ImagesController < ApplicationController
    end
  end
 
+ def destroy
+   image = Image.find(params[:id])
+   puts "{{{{{{{{{{{{{{{{{{{{{{{{#{image}}}}}}}}}}}}}}}}}}}}}}}}}"
+   image.destroy
+   @images = Image.where(gallery_id: params[:gallery_id])
+   respond_to do |format|
+      format.json { render :json => @images.to_a }
+   end
+ end
+
  private
  def image_params
    params.require(:image).permit(:image, :cover_image, :gallery_id)

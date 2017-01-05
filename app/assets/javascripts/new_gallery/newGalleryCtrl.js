@@ -15,11 +15,11 @@ app.controller('NewGalleryCtrl', [
       $scope.title = '';
     };
 
-    $scope.delete = function(index){
+    $scope.deleteGallery = function(index){
       var objectToDelete = $scope.galleries[index];
 
       if(confirm("Are you sure you want to delete this gallery?")){
-        galleries.delete(objectToDelete.id)
+        galleries.deleteGal(objectToDelete.id)
           .success(function(data){
             $scope.galleries = data;
         });
