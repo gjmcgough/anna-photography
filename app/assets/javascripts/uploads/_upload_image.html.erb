@@ -1,6 +1,7 @@
 <div id="new-gallery">
 
 
+
 <h2>Add an Image</h2>
 <form ng-submit="upload(file)">
   <div class="btn-group">
@@ -12,10 +13,10 @@
     <div class="input-group file-upld">
         <label class="input-group-btn">
             <span class="btn btn-default">
-                Browse&hellip; <input type="file" ngf-select ng-model="file" style="display: none;" name="image">
+                Select Image <input type="file" ngf-select ng-model="file" style="display: none;" name="image">
             </span>
         </label>
-        <input type="text" class="form-control" value="{{file.name}}">
+        <input type="text" class="form-control" placeholder="No File Selected..." value="{{file.name}}">
     </div><br>
   <button type="submit" class="btn btn-inverse btn-lrg upload-btn">Upload Image</button>
 </form><br><br>
@@ -23,7 +24,7 @@
 <div id="upload-gallery" class="container-fluid bg-3 text-center">
   <div class="row">
     <div class="gallery-images" ng-repeat="image in images" ng-mouseover="style={'height':'310px','width':'310px'}" ng-mouseleave="style={'height':'300px','width':'300px'}">
-        <img class ="gallery-images" ng-style="style" ng-src="{{ image.url }}" ng-hide="changeImage" alt="super awesome picture" />
+        <img class ="gallery-images" ng-style="style" ng-src="{{ image.url }}" ng-hide="changeImage" alt="super awesome picture"/>
     </div>
   </div>
 </div>
