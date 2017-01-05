@@ -11,7 +11,12 @@
 .gal-btn {
   color: #222;
   padding: 100px;
-  /*background-color: #222;*/
+  /*background-color: gold;*/
+}
+
+.file-upld{
+  width: 50%;
+  margin: 0 auto;
 }
 
 .gal-btn:hover {
@@ -21,6 +26,18 @@
 .make-gal-btn {
   border: solid 1px #9d9d9d;
   background-color: #000000;
+}
+
+.upload-btn {
+  cursor: pointer;
+  background-color: gold;
+  color: #000000;
+  width: 50%;
+  font-size: 150%;
+}
+
+.gallery-images, .img-thumbnail {
+  cursor: pointer;
 }
 
 .btn-align {
