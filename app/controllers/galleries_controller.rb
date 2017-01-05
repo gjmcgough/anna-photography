@@ -14,6 +14,13 @@ class GalleriesController < ApplicationController
     respond_with Gallery.create(gallery_params)
   end
 
+  def destroy
+    gallery = Gallery.find(params[:id])
+    gallery.destroy
+    galleries = Gallery.all
+    respond_with galleries
+  end
+
   private
   def gallery_params
     params.require(:gallery).permit(:title)

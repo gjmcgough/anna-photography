@@ -9,6 +9,7 @@
     <div class="btn-align">
       <div ng-repeat="gallery in galleries" class="title-btn">
         <button class="btn btn-lg btn-secondary"><a href="#/upload_image/{{gallery.id}}" class="title-btn">{{gallery.title}}</a></button>
+        <a ng-click="deleteGallery($index)" class="delete-btn"><h4>Delete Gallery</h4></a>
       </div>
     </div>
   </div>
