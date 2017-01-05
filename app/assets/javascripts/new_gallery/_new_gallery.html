@@ -8,7 +8,7 @@
     </form>
     <div class="btn-align">
       <div ng-repeat="gallery in galleries" class="title-btn">
-        <button class="btn btn-lg btn-secondary"><a href="#/upload_image/{{gallery.id}}" class="title-btn">{{gallery.title}}</a></button><br>
+        <button class="btn btn-lg btn-secondary edit-gal-btn"><a href="#/upload_image/{{gallery.id}}" class="title-btn">{{gallery.title}}</a></button><br>
         <a ng-click="deleteGallery($index)" class="delete-btn"><button class="btn btn-danger">Delete Gallery</button></a>
       </div>
     </div>
