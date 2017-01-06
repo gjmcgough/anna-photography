@@ -14,6 +14,10 @@
   /*background-color: gold;*/
 }
 
+.change-gal-btn {
+  cursor: default;
+}
+
 .file-upld{
   width: 50%;
   margin: 0 auto;
