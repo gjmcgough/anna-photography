@@ -1,11 +1,23 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#/new">Edit Galleries</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link away" data-toggle="tab" href="#/new_gallery">Edit Gallery Photos</a>
+  </li>
+</ul>
 <div id="new-gallery">
   <div class="row">
-    <h1>Hey Sexy</h1>
-    <a href="#/new_gallery" class="gal-btn"><button type="button" class="btn btn-lg btn-secondary upload-btn">Edit Galleries</button></a>
-    <h2>Edit Images in a Gallery:</h2>
+    <h2>Edit Galleries</h2>
+    <form ng-submit="makeGallery()">
+      <h3>Enter New Gallery Name:</h3>
+      <input type="text" class="input-lg" id="input-lg" ng-model="title" size="50" placeholder="Example Gallery Name"></input>
+      <button class="btn btn-lg make-gal-btn" ng-click="makeGallery()">Make New Gallery</button>
+    </form>
     <div class="btn-align">
       <div ng-repeat="gallery in galleries" class="title-btn">
-        <button type="button" class="btn btn-lg btn-secondary cust-btn"><a href="#/upload_image/{{gallery.id}}" class="title-btn">{{gallery.title}}</a></button>
+        <button class="btn btn-lg btn-secondary"><a href="#/upload_image/{{gallery.id}}" class="title-btn">{{gallery.title}}</a></button><br>
+        <a ng-click="deleteGallery($index)" class="delete-btn"><button class="btn btn-danger">Delete Gallery</button></a>
       </div>
     </div>
   </div>
