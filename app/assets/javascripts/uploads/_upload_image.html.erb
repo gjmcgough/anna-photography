@@ -1,12 +1,21 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link away" data-toggle="tab" href="#/new">Edit Galleries</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link  away" data-toggle="tab" href="#/new_gallery">Edit Gallery Photos</a>
+  </li>
+</ul>
+
 <div id="upload-container">
-<h2>Add an Image to the {{gallery.title}} Gallery</h2>
+<h2>Add an Image to the {{gallery.title}} Gallery</h2><br>
 <form ng-submit="upload(file)">
-  <div class="btn-group">
+  <!-- <div class="btn-group">
     <h4>Make this image the gallery's cover image?</h4>
     <input type='radio' name='cover-bool' ng-model='coverBool' value='true' />YES
     <input type='radio' name='cover-bool' ng-model='coverBool' value='false' /> NO
-  </div><br><br>
-  Select Image to Upload:
+  </div><br><br> -->
+  <h3>Select Image to Upload:</h3><br>
     <div class="input-group file-upld">
         <label class="input-group-btn">
             <span class="btn btn-default">
@@ -19,15 +28,6 @@
 </form><br><br>
 
 <div id="upload-gallery" class="container-fluid bg-3 text-center">
-  <!-- <div class="row">
-      <div ng-repeat="image in images" ng-mouseover="style={'height':'310px','width':'310px'}" ng-mouseleave="style={'height':'300px','width':'300px'}">
-          <img class ="img-thumbnail" ng-style="style" ng-src="{{ image.url }}" ng-hide="changeImage" alt="super awesome picture"/><br>
-          <a ng-click="deleteGallery($index)" class="delete-btn"><button class="btn btn-danger gal-img-container">Delete Gallery</button></a>
-      </div>
-  </div> -->
-
-
-
  <div class="container-fluid bg-3 text-center">
  <div class="row">
     <ul class="gallery gallery1">
