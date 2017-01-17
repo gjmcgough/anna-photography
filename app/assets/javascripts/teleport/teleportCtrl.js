@@ -6,6 +6,6 @@ app.controller('TeleportCtrl', [
   function($scope, galleries){
     $scope.galleries = galleries.galleries;
     $scope.cover_images = galleries.cover_images;
-    $scope.home_image = galleries.cover_images[8];
+    $scope.home_image = galleries.cover_images[9];
 
 }]);
