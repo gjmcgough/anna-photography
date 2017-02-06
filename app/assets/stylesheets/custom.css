@@ -125,6 +125,10 @@ body {
   background-color: #222;
 }
 
+.current-cover-image {
+  border: solid 2px red;
+}
+
 .gallery {
   padding: 0;
   margin: 10px;

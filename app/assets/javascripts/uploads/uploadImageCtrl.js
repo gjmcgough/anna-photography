@@ -12,6 +12,13 @@ app.controller('UploadImageCtrl', [
     $scope.coverBool = false;
     $scope.galleries = galleries.galleries;
 
+    function isCoverImage(image) {
+      return image.cover_image === true
+    }
+
+    $scope.coverImage = $scope.images.find(isCoverImage)
+
+
     $scope.upload = function(file){
       Upload.upload({
         url: '/galleries/' + gallery.id + '/images.json',
