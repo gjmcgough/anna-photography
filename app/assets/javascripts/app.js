@@ -87,6 +87,21 @@ app.config([
       });
 
     $stateProvider
+      .state('change_cover_image', {
+        url: '/change_cover_image/{id}',
+        templateUrl: 'uploads/_change_cover_image.html',
+        controller: 'UploadImageCtrl',
+        resolve: {
+          gallery: ['$stateParams', 'galleries', function($stateParams, galleries){
+            return galleries.getGallery($stateParams.id);
+          }],
+          postPromise: ['$stateParams', 'galleries', function($stateParams, galleries){
+            return galleries.getImages($stateParams.id);
+          }]
+        }
+      });
+
+    $stateProvider
       .state('login', {
         url: '/login',
         templateUrl: 'auth/_login.html',

@@ -36,7 +36,6 @@ app.controller('UploadImageCtrl', [
 
     $scope.removeImage = function(index){
       var objectToDelete = $scope.images[index];
-      console.log(galleries.images);
       if(confirm("Are you sure you want to delete this photo?")){
         galleries.deleteImg(objectToDelete.id, gallery.id)
           .success(function(data){
@@ -45,4 +44,13 @@ app.controller('UploadImageCtrl', [
       };
     };
 
+    $scope.makeCoverImage = function(index){
+      var newCoverImage = $scope.images[index];
+      if(confirm("Are you sure you want to make this the cover image?")){
+        galleries.updateCoverImage(newCoverImage.id, gallery.id)
+          .success(function(data){
+            $scope.images = data;
+        });
+      };
+    };
 }]);
