@@ -2,7 +2,7 @@
   <li class="nav-item">
     <a class="nav-link active" data-toggle="tab" href="#/new">Edit Galleries</a>
   </li>
-  
+
 </ul>
 <div id="new-gallery">
   <div class="row">
@@ -14,7 +14,7 @@
     </form>
     <div class="btn-align">
       <div ng-repeat="gallery in galleries" class="title-btn">
-        <button class="btn btn-lg btn-secondary change-gal-btn"><a href="" class="change-gal-btn title-btn">{{gallery.title}}</a></button><br>
+        <button class="btn btn-lg btn-secondary change-gal-btn"><a href="#/upload_image/{{gallery.id}}" class="change-gal-btn title-btn">{{gallery.title}}</a></button><br>
         <a ng-click="deleteGallery($index)" class="delete-btn"><button class="btn btn-danger">Delete Gallery</button></a>
       </div>
     </div>
