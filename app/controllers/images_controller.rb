@@ -40,11 +40,12 @@ class ImagesController < ApplicationController
   end
 
   def update
+   @images = Gallery.find(params[:gallery_id]).images.to_a
    image = Image.find(params[:id])
-   if image.update(image_params)
-     respond_with image
-   else
-     status 404
+   @images.each { |image| image.update(cover_image: false) }
+   image.update(cover_image: true)
+   respond_to do |format|
+     format.json {render :json => @images }
    end
  end
 

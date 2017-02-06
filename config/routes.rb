@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'application#angular'
   get 'cover_images', to: 'images#cover_images'
   resources :galleries, only: [:index, :show, :create, :destroy] do
-    resources :images, only: [:index, :show, :create, :destroy] do
+    resources :images, only: [:index, :show, :update, :create, :destroy] do
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
