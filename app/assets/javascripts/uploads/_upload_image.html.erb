@@ -9,6 +9,17 @@
 
 <div id="upload-container">
 <h2>Edit the {{gallery.title}} Gallery</h2><br>
+<h3>Current {{gallery.title}} Gallery Cover Image: </h3><br>
+
+  <div class="container-fluid bg-3 text-center">
+    <div class="row">
+      <a ng-click="openLightboxModal($index)">
+        <img ng-src="{{coverImage.thumb}}" class="img-thumbnail current-cover-image" ng-style="style">
+      </a><br>
+    </div>
+  </div>
+
+
 <form ng-submit="upload(file)">
   <h3>Select Image to Upload:</h3><br>
     <div class="input-group file-upld">
