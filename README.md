@@ -1,3 +1,5 @@
+https://travis-ci.org/gjmcgough/anna-photography.svg?branch=master
+
 # anna-photography
 
 This is a photography portfolio app built using Rails, Angular, and Amazon S3.
