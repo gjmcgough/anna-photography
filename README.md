@@ -1,4 +1,5 @@
-https://travis-ci.org/gjmcgough/anna-photography.svg?branch=master
+
+![alt text](https://travis-ci.org/gjmcgough/anna-photography.svg?branch=master "Travis CI Build Status")
 
 # anna-photography
 
