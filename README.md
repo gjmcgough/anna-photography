@@ -1,5 +1,5 @@
 
-![alt text](https://travis-ci.org/gjmcgough/anna-photography.svg?branch=master "Travis CI Build Status")
+[![Build Status](https://travis-ci.org/gjmcgough/anna-photography.svg?branch=master)](https://travis-ci.org/gjmcgough/anna-photography)
 
 # anna-photography
 
