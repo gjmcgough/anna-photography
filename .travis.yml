@@ -3,8 +3,6 @@ sudo: required
 language: ruby
 rvm:
  - 2.2
- - jruby
- - rbx-2
 # uncomment and edit the following line if your project needs to run something other than `rake`:
 # script: bundle exec
 
@@ -12,4 +10,4 @@ services:
   - postgresql
 
 before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
+  - psql -c 'create database anna-portfolio_test;' -U postgres
