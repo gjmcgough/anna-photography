@@ -1,0 +1,13 @@
+sudo: required
+
+language: ruby
+rvm:
+ - 2.2
+# uncomment and edit the following line if your project needs to run something other than `rake`:
+# script: bundle exec
+
+services:
+  - postgresql
+
+before_script:
+  - "bundle exec rake db:test:prepare"
