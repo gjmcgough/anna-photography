@@ -1,7 +1,5 @@
 
-[![Build Status](https://travis-ci.org/gjmcgough/anna-photography.svg?branch=master)](https://travis-ci.org/gjmcgough/anna-photography)
-
-[![Coverage Status](https://coveralls.io/repos/github/gjmcgough/anna-photography/badge.svg?branch=master)](https://coveralls.io/github/gjmcgough/anna-photography?branch=master)
+[![Build Status](https://travis-ci.org/gjmcgough/anna-photography.svg?branch=master)](https://travis-ci.org/gjmcgough/anna-photography) [![Coverage Status](https://coveralls.io/repos/github/gjmcgough/anna-photography/badge.svg?branch=master)](https://coveralls.io/github/gjmcgough/anna-photography?branch=master)
 
 # anna-photography
 
