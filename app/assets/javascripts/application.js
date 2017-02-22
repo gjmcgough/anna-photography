@@ -7,4 +7,5 @@
 //= require angular-ui-bootstrap-tpls
 //= require angular-animate
 //= require angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox
+//= require angular-loading-bar/build/loading-bar.js
 //= require_tree .

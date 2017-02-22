@@ -1,9 +1,10 @@
-var app = angular.module('annaPhotography', ['ui.router', 'templates', 'Devise', 'ngFileUpload', 'bootstrapLightbox']);
+var app = angular.module('annaPhotography', ['ui.router', 'templates', 'Devise', 'ngFileUpload', 'bootstrapLightbox', 'angular-loading-bar']);
 
 app.config([
   '$stateProvider',
   '$urlRouterProvider',
-  function($stateProvider, $urlRouterProvider) {
+  'cfpLoadingBarProvider',
+  function($stateProvider, $urlRouterProvider, cfpLoadingBarProvider) {
 
     $stateProvider
       .state('index', {
@@ -114,5 +115,7 @@ app.config([
       });
 
   $urlRouterProvider.otherwise('index');
+  cfpLoadingBarProvider.parentSelector = '#loading-bar-container';
+  cfpLoadingBarProvider.includeSpinner = false;
 
 }]);
