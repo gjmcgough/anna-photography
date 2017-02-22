@@ -1,3 +1,7 @@
+#loading-bar .bar {
+  position: relative;
+}
+
 .blue {
     margin-top: 85px;
     /*border: 2px solid blue;*/

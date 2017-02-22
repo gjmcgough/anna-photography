@@ -1,12 +1,12 @@
-  <div id="teleport-gallery" class="container-fluid bg-3 text-center">
-    <div class="row">
-      <div class="teleport-images" ng-repeat="cover_image in cover_images" ng-mouseover="style={'height':'410px','width':'410px'}" ng-mouseleave="style={'height':'400px','width':'400px'}">
-        <a href="#/location_gallery/{{cover_image.gallery_id}}">
-          <img class ="teleport-images" ng-style="style"  ng-hide="changeImage" ng-src="{{ cover_image.cover }}" alt="super awesome picture" />
-        </a>
-        <a href="#/location_gallery/{{cover_image.gallery_id}}">
-          <h2 class="teleport-titles">{{cover_image.gallery_title}}</h2>
-        </a>
-      </div>
+<div id="teleport-gallery" class="container-fluid bg-3 text-center">
+  <div class="row">
+    <div class="teleport-images" ng-repeat="cover_image in cover_images" ng-mouseover="style={'height':'410px','width':'410px'}" ng-mouseleave="style={'height':'400px','width':'400px'}">
+      <a href="#/location_gallery/{{cover_image.gallery_id}}">
+        <img class ="teleport-images" ng-style="style"  ng-hide="changeImage" ng-src="{{ cover_image.cover }}" alt="super awesome picture" />
+      </a>
+      <a href="#/location_gallery/{{cover_image.gallery_id}}">
+        <h2 class="teleport-titles">{{cover_image.gallery_title}}</h2>
+      </a>
     </div>
   </div>
+</div>
