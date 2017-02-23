@@ -58,7 +58,7 @@ app.controller('UploadImageCtrl', [
       if(confirm("Are you sure you want to make this the cover image?")){
         galleries.updateCoverImage(newCoverImage.id, gallery.id)
           .success(function(data){
-            $scope.images = data;
+            $scope.coverImage = data;
         });
       };
     };

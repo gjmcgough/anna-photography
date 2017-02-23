@@ -41,11 +41,11 @@ class ImagesController < ApplicationController
 
   def update
    @images = Gallery.find(params[:gallery_id]).images.to_a
-   image = Image.find(params[:id])
+   @image = Image.find(params[:id])
    @images.each { |image| image.update(cover_image: false) }
-   image.update(cover_image: true)
+   @image.update(cover_image: true)
    respond_to do |format|
-     format.json {render :json => @images }
+     format.json {render :json => @image }
    end
  end
 

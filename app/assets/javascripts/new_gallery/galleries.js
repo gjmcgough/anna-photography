@@ -53,7 +53,7 @@ o.deleteImg = function(id, gallery_id) {
 
 o.updateCoverImage = function(id, gallery_id) {
   return $http.put('/galleries/' + gallery_id + '/images/' + id + '.json').success(function(data){
-    o.images.push(data);
+    // angular.copy(data, o.images);
   });
 };
 
