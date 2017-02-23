@@ -14,6 +14,15 @@ class GalleriesController < ApplicationController
     respond_with Gallery.create(gallery_params)
   end
 
+  def update
+    @galleries = Gallery.all
+    @gallery = Gallery.find(params[:id])
+    @gallery.update(gallery_params)
+    respond_to do |format|
+      format.json { render :json => @gallery }
+    end
+  end
+
   def destroy
     gallery = Gallery.find(params[:id])
     images = gallery.images.to_a

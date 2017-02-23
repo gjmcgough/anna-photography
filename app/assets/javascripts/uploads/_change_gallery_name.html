@@ -1,0 +1,23 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link away" data-toggle="tab" href="#/new">Edit Galleries</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link  away" data-toggle="tab" href="#/upload_image/{{gallery.id}}">Edit {{gallery.title}} Photos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link  active" data-toggle="tab">Change Gallery Name</a>
+  </li>
+</ul>
+
+<div id="new-gallery">
+  <div class="row">
+    <h2>Change {{gallery.title}} Gallery Name</h2>
+    <form ng-submit="updateGallery()">
+      <h3>Enter New Gallery Name:</h3>
+      <!-- <input type="hidden" ng-model="gallery" value="{{gallery}}"> -->
+      <input type="text" class="input-lg" id="input-lg" ng-model="title" size="50" value="{{gallery.title}}"></input>
+      <button class="btn btn-lg make-gal-btn" ng-click="updateGallery()">Update Gallery Name</button>
+    </form>
+  </div>
+</div>

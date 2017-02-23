@@ -18,6 +18,15 @@ app.controller('UploadImageCtrl', [
 
     $scope.coverImage = $scope.images.find(isCoverImage)
 
+    $scope.updateGallery = function(){
+      if(!$scope.title || $scope.title === '') {return;}
+      galleries.update((gallery.id), {
+        title: $scope.title,
+      }).success(function(data){
+        gallery.title = data.title;
+      });
+      $scope.title = '';
+    };
 
     $scope.upload = function(file){
       Upload.upload({
