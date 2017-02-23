@@ -18,6 +18,9 @@ class GalleriesController < ApplicationController
     @galleries = Gallery.all
     @gallery = Gallery.find(params[:id])
     @gallery.update(gallery_params)
+    @gallery.images.each do |image|
+      image.update(gallery_title: @gallery.title)
+    end
     respond_to do |format|
       format.json { render :json => @gallery }
     end

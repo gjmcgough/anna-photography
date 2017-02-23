@@ -16,7 +16,7 @@
     <form ng-submit="updateGallery()">
       <h3>Enter New Gallery Name:</h3>
       <!-- <input type="hidden" ng-model="gallery" value="{{gallery}}"> -->
-      <input type="text" class="input-lg" id="input-lg" ng-model="title" size="50" value="{{gallery.title}}"></input>
+      <input type="text" class="input-lg" id="input-lg" ng-model="title" size="50" ng-init="title='{{gallery.title}}'" value="{{gallery.title}}"></input>
       <button class="btn btn-lg make-gal-btn" ng-click="updateGallery()">Update Gallery Name</button>
     </form>
   </div>
