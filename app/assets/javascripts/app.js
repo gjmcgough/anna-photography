@@ -103,6 +103,21 @@ app.config([
       });
 
     $stateProvider
+      .state('change_gallery_name', {
+        url: '/change_gallery_name/{id}',
+        templateUrl: 'uploads/_change_gallery_name.html',
+        controller: 'UploadImageCtrl',
+        resolve: {
+          gallery: ['$stateParams', 'galleries', function($stateParams, galleries){
+            return galleries.getGallery($stateParams.id);
+          }],
+          postPromise: ['$stateParams', 'galleries', function($stateParams, galleries){
+            return galleries.getImages($stateParams.id);
+          }]
+        }
+      });
+
+    $stateProvider
       .state('login', {
         url: '/login',
         templateUrl: 'auth/_login.html',

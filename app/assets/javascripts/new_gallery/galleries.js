@@ -57,6 +57,12 @@ o.updateCoverImage = function(id, gallery_id) {
   });
 };
 
+o.update = function(id, gallery) {
+  return $http.put('/galleries/' + id + '.json', gallery).success(function(data){
+    o.galleries.push(data);
+  });
+};
+
 return o;
 
 }]);

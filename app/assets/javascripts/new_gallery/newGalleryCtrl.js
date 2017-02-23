@@ -8,7 +8,7 @@ app.controller('NewGalleryCtrl', [
     $scope.images = galleries.images;
 
     $scope.makeGallery = function(){
-      if(!$scope.title || $scope.title === '') {return;}
+      if(!$scope.title || $scope.title == '') {return;}
       galleries.create({
         title: $scope.title,
       });
