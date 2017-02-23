@@ -25,7 +25,6 @@ app.controller('UploadImageCtrl', [
       }).success(function(data){
         gallery.title = data.title;
       });
-      $scope.title = '';
     };
 
     $scope.upload = function(file){
